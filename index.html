@@ -131,25 +131,47 @@
 
     </div>
 
-    <!-- Bottom convex arc — white rises up in center -->
+    <!-- Bottom convex arc — white hill rising up from below -->
     <div class="hero-bottom-cut">
       <svg viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Control point at Y=-80 pushes the arc UP into the navy, white fills below -->
-        <path d="M0,200 L0,160 Q720,-80 1440,160 L1440,200 Z" fill="#ffffff"/>
+        <path d="M0,200 L0,140 Q720,0 1440,140 L1440,200 Z" fill="#ffffff"/>
       </svg>
     </div>
   </section>
 
   <!-- COURSES SECTION -->
   <section class="courses" id="courses">
-    <div class="section-container">
-      <div class="section-header">
-        <p class="section-tag">Across 12 Courses</p>
-        <h2 class="section-title">Practical Courses<br /><span class="highlight">For Work &amp; Life</span></h2>
+    <div class="courses-container">
+
+      <!-- Header -->
+      <div class="courses-header">
+        <h2 class="courses-title">Practical Courses</h2>
+        <p class="courses-subtitle">For Work &amp; Life</p>
       </div>
-      <div class="courses-grid" id="coursesGrid">
-        <!-- Cards injected by JS -->
+
+      <!-- Filter Tabs -->
+      <div class="courses-tabs" id="coursesTabs">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="productivity">Productivity</button>
+        <button class="tab-btn" data-tab="growth">Growth</button>
+        <button class="tab-btn" data-tab="money">Money</button>
+        <button class="tab-btn" data-tab="launchpad">Launchpad</button>
       </div>
+
+      <!-- Carousel wrapper -->
+      <div class="courses-carousel-outer">
+        <div class="courses-carousel" id="coursesCarousel">
+          <!-- Cards injected by JS -->
+        </div>
+        <!-- Arrow -->
+        <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+      </div>
+
     </div>
   </section>
 

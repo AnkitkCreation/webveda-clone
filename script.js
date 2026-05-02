@@ -1,11 +1,125 @@
-// ===== DATA =====
+// ===== COURSES DATA =====
 const courses = [
-  { emoji: "💼", title: "The Complete Guide To Starting Up", desc: "Everything you need to know to start your own business from scratch.", price: "₹1,999", tag: "Business" },
-  { emoji: "📧", title: "The Art Of Cold Emailing", desc: "Master the skill of writing cold emails that actually get replies.", price: "₹999", tag: "Communication" },
-  { emoji: "💰", title: "The Complete Guide To Personal Finance", desc: "Take control of your money, investments, and financial future.", price: "₹1,999", tag: "Finance" },
-  { emoji: "🎥", title: "The Complete Guide To Content Creation", desc: "Build an audience and create content that resonates and grows.", price: "₹1,999", tag: "Content" },
-  { emoji: "🧠", title: "The Complete Guide To Decision Making", desc: "Learn frameworks to make better decisions in work and life.", price: "₹1,499", tag: "Mindset" },
-  { emoji: "🤝", title: "The Complete Guide To Networking", desc: "Build meaningful professional relationships that open doors.", price: "₹1,499", tag: "Career" }
+  {
+    tab: ['all','launchpad'],
+    headerSup: 'BUILD YOUR ONLINE', headerName: 'TEACHING\nBUSINESS',
+    icon: '🎓',
+    img: 'https://placehold.co/280x210/f5a623/ffffff?text=Teaching+Business',
+    badge: null,
+    title: 'Take Your Teaching Online',
+    lang: 'In English', students: '4.8K+ Students',
+    price: '₹1799', ctaColor: '#f5a623'
+  },
+  {
+    tab: ['all','launchpad'],
+    headerSup: 'HOW TO', headerName: 'YOUTUBE',
+    icon: '▶️',
+    img: 'https://placehold.co/280x210/cc0000/ffffff?text=YouTube',
+    badge: null,
+    title: 'Grow & Monetize Your Channel',
+    lang: 'In English & Hindi', students: '34K+ Students',
+    price: '₹1799', ctaColor: '#cc0000'
+  },
+  {
+    tab: ['all','launchpad'],
+    headerSup: 'INSTAGRAM MASTERY', headerName: 'FOR CREATORS',
+    icon: '📸',
+    img: 'https://placehold.co/280x210/e1306c/ffffff?text=Instagram',
+    badge: null,
+    title: 'Master Instagram Growth',
+    lang: 'In English & Hindi', students: '19K+ Students',
+    price: '₹1799', ctaColor: '#e1306c'
+  },
+  {
+    tab: ['all','launchpad'],
+    headerSup: 'LEARN TO', headerName: 'LINKEDIN',
+    icon: '💼',
+    img: 'https://placehold.co/280x210/0077b5/ffffff?text=LinkedIn',
+    badge: null,
+    title: 'Grow Professionally Through LinkedIn',
+    lang: 'In English', students: '4K+ Students',
+    price: '₹1799', ctaColor: '#0077b5'
+  },
+  {
+    tab: ['all','productivity'],
+    headerSup: 'THE', headerName: 'AI ADVANTAGE\nCOURSE',
+    icon: '💡',
+    img: 'https://placehold.co/280x210/f5c518/222222?text=AI+Course',
+    badge: 'Newly Launched!',
+    title: 'Save Time And Money With AI',
+    lang: 'In Hindi', students: 'Newly Launched!',
+    price: '₹399', ctaColor: '#f5c518', ctaTextColor: '#111'
+  },
+  {
+    tab: ['all','productivity'],
+    headerSup: 'THE ULTIMATE GUIDE TO', headerName: 'EFFECTIVE\nCOMMUNICATION',
+    icon: '💬',
+    img: 'https://placehold.co/280x210/7c5cbf/ffffff?text=Communication',
+    badge: null,
+    title: 'Master Communication Skills',
+    lang: 'In English & Hindi', students: '94K+ Students',
+    price: '₹849', ctaColor: '#7c5cbf'
+  },
+  {
+    tab: ['all','productivity'],
+    headerSup: 'TAKE CHARGE OF', headerName: 'YOUR TIME',
+    icon: '⏳',
+    img: 'https://placehold.co/280x210/f5a623/ffffff?text=Time+Management',
+    badge: null,
+    title: 'Get More Done In Less Time',
+    lang: 'In English & Hindi', students: '260K Students',
+    price: '₹599', ctaColor: '#f5a623'
+  },
+  {
+    tab: ['all','growth'],
+    headerSup: 'THE ULTIMATE', headerName: 'FREELANCING\nGUIDE',
+    icon: '💰',
+    img: 'https://placehold.co/280x210/27ae60/ffffff?text=Freelancing',
+    badge: 'Newly Launched!',
+    title: 'Start Your Freelancing Career',
+    lang: 'In English', students: 'Newly Launched!',
+    price: '₹3499', ctaColor: '#27ae60'
+  },
+  {
+    tab: ['all','money'],
+    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'PERSONAL\nFINANCE',
+    icon: '📊',
+    img: 'https://placehold.co/280x210/2980b9/ffffff?text=Personal+Finance',
+    badge: null,
+    title: 'Master Your Money',
+    lang: 'In English & Hindi', students: '120K+ Students',
+    price: '₹1999', ctaColor: '#2980b9'
+  },
+  {
+    tab: ['all','money'],
+    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'STARTING UP',
+    icon: '🚀',
+    img: 'https://placehold.co/280x210/e74c3c/ffffff?text=Starting+Up',
+    badge: null,
+    title: 'Launch Your Own Business',
+    lang: 'In English', students: '55K+ Students',
+    price: '₹1999', ctaColor: '#e74c3c'
+  },
+  {
+    tab: ['all','growth'],
+    headerSup: 'THE ART OF', headerName: 'COLD EMAILING',
+    icon: '📧',
+    img: 'https://placehold.co/280x210/16a085/ffffff?text=Cold+Emailing',
+    badge: null,
+    title: 'Write Emails That Get Replies',
+    lang: 'In English', students: '30K+ Students',
+    price: '₹999', ctaColor: '#16a085'
+  },
+  {
+    tab: ['all','growth'],
+    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'NETWORKING',
+    icon: '🤝',
+    img: 'https://placehold.co/280x210/8e44ad/ffffff?text=Networking',
+    badge: null,
+    title: 'Build Meaningful Connections',
+    lang: 'In English', students: '22K+ Students',
+    price: '₹1499', ctaColor: '#8e44ad'
+  }
 ];
 
 const whoFor = [
@@ -115,7 +229,7 @@ function getPointOnPath(path, dist) {
   return { x: 0, y: 0 };
 }
 
-function createCometOrbit(el, color = '#7baeff', speed = 0.55, tailLength = 0.18, pad = 6) {
+function createCometOrbit(el, color = '#7baeff', speed = 0.22, tailLength = 0.18, pad = 6) {
   // speed = fraction of perimeter per second
   // tailLength = fraction of perimeter the tail covers
   const canvas = document.createElement('canvas');
@@ -218,21 +332,143 @@ function hexToRgba(hex, alpha) {
   return `rgba(${r},${g},${b},${alpha})`;
 }
 
-// ===== RENDER COURSES =====
-function renderCourses() {
-  const grid = document.getElementById('coursesGrid');
-  if (!grid) return;
-  grid.innerHTML = courses.map(c => `
-    <div class="course-card reveal">
-      <span class="course-emoji">${c.emoji}</span>
-      <h3 class="course-title">${c.title}</h3>
-      <p class="course-desc">${c.desc}</p>
-      <div class="course-footer">
-        <span class="course-price">${c.price}</span>
-        <span class="course-tag">${c.tag}</span>
+// ===== COURSES CAROUSEL =====
+let activeTab = 'all';
+let carouselOffset = 0;   // px translateX (negative = scrolled right)
+
+function buildCourseCard(c) {
+  const headerLines = c.headerName.split('\n');
+  const badgeHtml = c.badge
+    ? `<div class="card-badge badge-new">
+        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        ${c.badge}
+       </div>`
+    : '';
+  const ctaText = c.ctaTextColor ? c.ctaTextColor : '#fff';
+  return `
+    <div class="course-card" data-tabs="${c.tab.join(',')}">
+      <div class="card-header">
+        <div class="card-header-icon">${c.icon}</div>
+        <div class="card-header-text">
+          <span class="card-header-sup">${c.headerSup}</span>
+          <span class="card-header-name">${headerLines.join('<br>')}</span>
+        </div>
       </div>
-    </div>
-  `).join('');
+      <div class="card-image-wrap">
+        <img src="${c.img}" alt="${c.title}" loading="lazy" />
+        ${badgeHtml}
+        <div class="card-hover-overlay">
+          <div class="card-overlay-title">${c.title}</div>
+          <div class="card-overlay-meta">
+            <span>🎤 ${c.lang}</span>
+            <span>🎓 ${c.students}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">${c.title}</div>
+        <div class="card-meta">
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            ${c.lang}
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            ${c.students}
+          </span>
+        </div>
+      </div>
+      <div class="card-cta" style="background:${c.ctaColor};color:${ctaText}">
+        Starts at ${c.price} &nbsp;→
+      </div>
+    </div>`;
+}
+
+function getFilteredCourses() {
+  return courses.filter(c => c.tab.includes(activeTab));
+}
+
+function renderCoursesCarousel() {
+  const carousel = document.getElementById('coursesCarousel');
+  if (!carousel) return;
+  const filtered = getFilteredCourses();
+  carousel.innerHTML = filtered.map(buildCourseCard).join('');
+  carouselOffset = 0;
+  carousel.style.transform = 'translateX(0)';
+  updateArrows();
+}
+
+function getCardWidth() {
+  const carousel = document.getElementById('coursesCarousel');
+  if (!carousel) return 260;
+  const card = carousel.querySelector('.course-card');
+  if (!card) return 260;
+  return card.offsetWidth + 18; // card width + gap
+}
+
+function getMaxOffset() {
+  const carousel = document.getElementById('coursesCarousel');
+  if (!carousel) return 0;
+  const outer = carousel.parentElement;
+  const totalW = carousel.scrollWidth;
+  const visibleW = outer.offsetWidth;
+  return Math.max(0, totalW - visibleW + 8);
+}
+
+function updateArrows() {
+  const next = document.getElementById('carouselNext');
+  const prev = document.getElementById('carouselPrev');
+  if (!next || !prev) return;
+  prev.style.display = carouselOffset < -2 ? 'flex' : 'none';
+  next.disabled = Math.abs(carouselOffset) >= getMaxOffset() - 2;
+}
+
+function initCarousel() {
+  const next = document.getElementById('carouselNext');
+  const prev = document.getElementById('carouselPrev');
+  const carousel = document.getElementById('coursesCarousel');
+  if (!next || !prev || !carousel) return;
+
+  next.addEventListener('click', () => {
+    const step = getCardWidth() * 2;
+    const max = getMaxOffset();
+    carouselOffset = Math.max(-(max), carouselOffset - step);
+    carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
+    carousel.style.transform = `translateX(${carouselOffset}px)`;
+    updateArrows();
+  });
+
+  prev.addEventListener('click', () => {
+    const step = getCardWidth() * 2;
+    carouselOffset = Math.min(0, carouselOffset + step);
+    carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
+    carousel.style.transform = `translateX(${carouselOffset}px)`;
+    updateArrows();
+  });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) next.click();
+      else prev.click();
+    }
+  }, { passive: true });
+}
+
+function initTabs() {
+  const tabs = document.getElementById('coursesTabs');
+  if (!tabs) return;
+  tabs.addEventListener('click', e => {
+    const btn = e.target.closest('.tab-btn');
+    if (!btn) return;
+    tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeTab = btn.dataset.tab;
+    renderCoursesCarousel();
+  });
 }
 
 // ===== RENDER WHO FOR =====
@@ -338,18 +574,19 @@ function observeReveal() {
 
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
-  // Typing animation
   setTimeout(typeLoop, 400);
 
-  // Comet orbit on CTA button — tight to border
   const ctaBtn = document.querySelector('.hero-cta');
   if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.28, 0.20, 5);
 
-  // Comet orbit on video — attach to wrapper so overflow:hidden doesn't clip it
   const videoWrap = document.querySelector('.hero-video-wrap');
   if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
 
-  renderCourses();
+  // Courses
+  renderCoursesCarousel();
+  initCarousel();
+  initTabs();
+
   renderWhoFor();
   renderTestimonials();
   renderFAQ();
