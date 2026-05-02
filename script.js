@@ -413,12 +413,11 @@ function applyFilter() {
 
 function getVisibleCardWidth() {
   const carousel = document.getElementById('coursesCarousel');
-  if (!carousel) return 256;
+  if (!carousel) return 246;
   const card = carousel.querySelector('.course-card:not(.hidden)');
-  if (!card) return 256;
-  const style = getComputedStyle(carousel);
-  const gap = parseFloat(style.gap) || 16;
-  return card.offsetWidth + gap;
+  if (!card) return 246;
+  // getBoundingClientRect gives the actual rendered width including vw-based sizes
+  return card.getBoundingClientRect().width + 16; // + gap
 }
 
 function getMaxOffset() {
