@@ -70,7 +70,7 @@ html, body {
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px; /* Removed vertical padding since wrapper handles it */
+  padding: 100px 24px;
 }
 .section-header {
   text-align: center;
@@ -90,7 +90,7 @@ html, body {
   margin-bottom: 16px;
 }
 .section-title {
-  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.2;
 }
@@ -962,7 +962,7 @@ html, body {
 /* ===== BENTO GRID TESTIMONIALS ===== */
 .bento-testimonials {
   background: #F8F9FB;
-  padding: 72px 0 80px;
+  padding: 80px 0;
   overflow: hidden;
 }
 
@@ -971,9 +971,9 @@ html, body {
   margin-bottom: 40px;
 }
 .bento-title {
-  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
-  font-weight: 800;
-  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1A2B50;
   line-height: 1.2;
 }
 .bento-subtitle {
@@ -1230,7 +1230,7 @@ html, body {
 
 /* ===== MEET OUR FOUNDER ===== */
 .founder-section {
-  padding: 72px 0 80px;
+  padding: 80px 0;
   background-color: #fff;
 }
 .founder-grid {
@@ -1248,7 +1248,7 @@ html, body {
   padding-right: 20px;
 }
 .founder-title {
-  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
   color: #1A2B50;
   margin-bottom: 8px;
@@ -1354,7 +1354,7 @@ html, body {
 }
 
 /* ===== FAQ ===== */
-.faq { background: #0d0d0d; padding: 72px 0 80px; }
+.faq { background: #0d0d0d; }
 .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
 .faq-item {
   background: var(--bg-card);
