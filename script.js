@@ -141,13 +141,62 @@ const whoFor = [
   { icon: "🏠", title: "Homemakers", desc: "Manage finances and build new skills." }
 ];
 
-const testimonials = [
-  { name: "Priya S.", role: "Content Creator", text: "Ankur's course completely changed how I approach content. My channel grew 3x in 6 months.", stars: 5 },
-  { name: "Rahul M.", role: "Software Engineer", text: "The personal finance course is a must. I finally understand where my money should go.", stars: 5 },
-  { name: "Sneha K.", role: "MBA Student", text: "The startup guide gave me the confidence to actually launch my idea. Highly recommend.", stars: 5 },
-  { name: "Arjun T.", role: "Freelancer", text: "Cold emailing course paid for itself in the first week. Got 3 new clients immediately.", stars: 5 },
-  { name: "Meera R.", role: "Marketing Manager", text: "The networking course is gold. I've built more meaningful connections in 2 months than in 2 years.", stars: 5 },
-  { name: "Vikram P.", role: "Entrepreneur", text: "Practical, no-fluff content. Exactly what I needed to take my business to the next level.", stars: 5 }
+const bentoSlides = [
+  {
+    z1_stat: "957K",
+    z1_label: "Accounts Reached",
+    z1_quote: "I was most excited about high engagement-driven content and monetisation. They both were covered nicely in the curriculum. So happy!",
+    z1_name: "Rashmi Sheoran",
+    z1_course: "Enrolled in Instagram Mastery For Creators",
+    z1_img: "assets/review1.png",
+    z2_target: 493112,
+    z3_quote: "Will make you question all that you've been doing till now.",
+    z3_author: "Riya Baria"
+  },
+  {
+    z1_stat: "275K",
+    z1_label: "Views in 3 months",
+    z1_quote: "This course taught me the science of making content. My stats have shown drastic improvement after implementing just half of their learnings.",
+    z1_name: "Ansh Mehra",
+    z1_course: "Enrolled in How To YouTube",
+    z1_img: "assets/review2.png",
+    z2_target: 504230,
+    z3_quote: "The best investment I've made for my career.",
+    z3_author: "Sneha K."
+  },
+  {
+    z1_stat: "4.5X",
+    z1_label: "Revenue Growth",
+    z1_quote: "The freelancing guide gave me exact templates to pitch clients. I closed 3 international clients within the first month.",
+    z1_name: "Arjun T.",
+    z1_course: "Enrolled in The Ultimate Freelancing Guide",
+    z1_img: "assets/review3.png",
+    z2_target: 512900,
+    z3_quote: "Practical, no-fluff content. Exactly what I needed.",
+    z3_author: "Vikram P."
+  },
+  {
+    z1_stat: "1.2M",
+    z1_label: "Impressions",
+    z1_quote: "The frameworks provided in this course are gold. I finally understand the LinkedIn algorithm.",
+    z1_name: "Priya S.",
+    z1_course: "Enrolled in Learn to LinkedIn",
+    z1_img: "assets/review4.png",
+    z2_target: 518450,
+    z3_quote: "Changed my entire perspective on content creation.",
+    z3_author: "Meera R."
+  },
+  {
+    z1_stat: "50+",
+    z1_label: "High Ticket Clients",
+    z1_quote: "I never thought writing could be this lucrative. The templates are literally copy-paste magic.",
+    z1_name: "Rahul M.",
+    z1_course: "Enrolled in Make Writing Your Career",
+    z1_img: "assets/review5.png",
+    z2_target: 524000,
+    z3_quote: "A must-have resource for anyone starting out.",
+    z3_author: "Karan D."
+  }
 ];
 
 const faqs = [
@@ -501,24 +550,177 @@ function renderWhoFor() {
   `).join('');
 }
 
-// ===== RENDER TESTIMONIALS =====
-function renderTestimonials() {
-  const track = document.getElementById('testimonialsTrack');
-  if (!track) return;
-  const cards = [...testimonials, ...testimonials];
-  track.innerHTML = cards.map(t => `
-    <div class="testimonial-card">
-      <div class="testimonial-stars">${'★'.repeat(t.stars)}</div>
-      <p class="testimonial-text">"${t.text}"</p>
-      <div class="testimonial-author">
-        <div class="author-avatar">${t.name[0]}</div>
-        <div>
-          <div class="author-name">${t.name}</div>
-          <div class="author-role">${t.role}</div>
-        </div>
-      </div>
-    </div>
-  `).join('');
+// ===== BENTO GRID LOGIC =====
+let currentBentoSlide = 0;
+let currentThoughtSlide = 0;
+let bentoInterval;
+let thoughtInterval;
+
+function initBentoGrid() {
+  renderAvatars();
+  updateBentoSlide(0);
+  updateThoughtSlide(0);
+  startBentoAutoplay();
+  startThoughtAutoplay();
+
+  document.getElementById('bentoPrev')?.addEventListener('click', () => {
+    currentBentoSlide = (currentBentoSlide - 1 + bentoSlides.length) % bentoSlides.length;
+    updateBentoSlide(currentBentoSlide);
+    resetBentoAutoplay();
+  });
+
+  document.getElementById('bentoNext')?.addEventListener('click', () => {
+    currentBentoSlide = (currentBentoSlide + 1) % bentoSlides.length;
+    updateBentoSlide(currentBentoSlide);
+    resetBentoAutoplay();
+  });
+
+  // Animate counter only once when the section comes into view
+  const zone2 = document.querySelector('.bento-zone-2');
+  if (zone2) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(493112);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(zone2);
+  }
+
+  // Shuffle avatars independently
+  setInterval(shuffleAvatars, 3500);
+}
+
+function updateBentoSlide(index) {
+  const slide = bentoSlides[index];
+  
+  // Wrap all zones to trigger enter animation
+  const fadeEls = document.querySelectorAll('.fade-el-z1');
+  fadeEls.forEach(el => {
+    el.classList.add('fade-out');
+  });
+
+  setTimeout(() => {
+    // Zone 1
+    document.getElementById('z1-stat-num').textContent = slide.z1_stat;
+    document.getElementById('z1-stat-label').textContent = slide.z1_label;
+    document.getElementById('z1-quote').textContent = '"' + slide.z1_quote + '"';
+    document.getElementById('z1-name').textContent = slide.z1_name;
+    document.getElementById('z1-course').textContent = slide.z1_course;
+    document.getElementById('z1-image').src = slide.z1_img;
+
+    // Trigger enter active
+    fadeEls.forEach(el => {
+      // small delay to allow reflow
+      void el.offsetWidth;
+      el.classList.remove('fade-out');
+    });
+  }, 300); // Wait for fade out
+}
+
+function updateThoughtSlide(index) {
+  const slide = bentoSlides[index];
+  
+  const fadeEls = document.querySelectorAll('.fade-el-z3');
+  fadeEls.forEach(el => {
+    el.classList.add('fade-out');
+  });
+
+  setTimeout(() => {
+    // Zone 3
+    document.getElementById('z3-quote').textContent = '"' + slide.z3_quote + '"';
+    document.getElementById('z3-author').textContent = slide.z3_author;
+
+    // Trigger enter active
+    fadeEls.forEach(el => {
+      void el.offsetWidth;
+      el.classList.remove('fade-out');
+    });
+  }, 300); // Wait for fade out
+}
+
+function animateCounter(target) {
+  const el = document.getElementById('z2-counter');
+  if (!el) return;
+  const start = Math.floor(target * 0.8); // Start at 80% to show animation
+  const duration = 2000;
+  const startTime = performance.now();
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(start + (target - start) * easeOutCubic);
+    el.textContent = current.toLocaleString();
+    if (progress < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString();
+  }
+  requestAnimationFrame(update);
+}
+
+function renderAvatars() {
+  const container = document.getElementById('z2-avatars');
+  if (!container) return;
+  const avatarColors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22', '#1abc9c', '#34495e'];
+  const numAvatars = 8;
+  let html = '';
+  for(let i=0; i<numAvatars; i++) {
+    const size = 30 + Math.random() * 20;
+    const top = 10 + Math.random() * 80;
+    const left = 5 + Math.random() * 90;
+    const delay = Math.random() * 4;
+    const color = avatarColors[i % avatarColors.length];
+    
+    // Create an initial style with random positions but keep them away from the center text
+    let adjustedLeft = left;
+    if (adjustedLeft > 35 && adjustedLeft < 65 && top > 35 && top < 65) {
+        adjustedLeft = left < 50 ? left - 30 : left + 30;
+    }
+
+    html += `<div class="floating-avatar" style="width:${size}px; height:${size}px; top:${top}%; left:${adjustedLeft}%; background-color:${color}; animation-delay:-${delay}s; opacity: 1;" data-index="${i}"></div>`;
+  }
+  container.innerHTML = html;
+}
+
+function shuffleAvatars() {
+  const avatars = document.querySelectorAll('.floating-avatar');
+  avatars.forEach(avatar => {
+    // Randomly hide some avatars and show new ones
+    if (Math.random() > 0.5) {
+      avatar.style.opacity = 0;
+      setTimeout(() => {
+        const top = 10 + Math.random() * 80;
+        const left = 5 + Math.random() * 90;
+        let adjustedLeft = left;
+        if (adjustedLeft > 35 && adjustedLeft < 65 && top > 35 && top < 65) {
+            adjustedLeft = left < 50 ? left - 30 : left + 30;
+        }
+        avatar.style.top = top + '%';
+        avatar.style.left = adjustedLeft + '%';
+        avatar.style.opacity = 1;
+      }, 500);
+    }
+  });
+}
+
+function startBentoAutoplay() {
+  bentoInterval = setInterval(() => {
+    document.getElementById('bentoNext')?.click();
+  }, 6000);
+}
+
+function resetBentoAutoplay() {
+  clearInterval(bentoInterval);
+  startBentoAutoplay();
+}
+
+function startThoughtAutoplay() {
+  thoughtInterval = setInterval(() => {
+    currentThoughtSlide = (currentThoughtSlide + 1) % bentoSlides.length;
+    updateThoughtSlide(currentThoughtSlide);
+  }, 5000); // slightly faster than review slide
 }
 
 // ===== RENDER FAQ =====
@@ -605,7 +807,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   initTabs();
 
-  renderTestimonials();
+  initBentoGrid();
   renderFAQ();
   observeReveal();
 });
