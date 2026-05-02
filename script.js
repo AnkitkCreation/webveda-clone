@@ -341,13 +341,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Typing animation
   setTimeout(typeLoop, 400);
 
-  // Comet orbit on CTA button (faster, shorter tail)
+  // Comet orbit on CTA button — tight to border
   const ctaBtn = document.querySelector('.hero-cta');
-  if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.6, 0.22, 7);
+  if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.28, 0.20, 5);
 
-  // Comet orbit on video card (slower, longer tail)
-  const videoCard = document.querySelector('.hero-video');
-  if (videoCard) createCometOrbit(videoCard, '#7baeff', 0.35, 0.28, 10);
+  // Comet orbit on video — attach to wrapper so overflow:hidden doesn't clip it
+  const videoWrap = document.querySelector('.hero-video-wrap');
+  if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
 
   renderCourses();
   renderWhoFor();
