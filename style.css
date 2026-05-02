@@ -12,7 +12,7 @@
   --border: #222;
   --radius: 16px;
   --radius-sm: 8px;
-  --font: 'Inter', sans-serif;
+  --font: "Rethink Sans", "Rethink Sans Placeholder", sans-serif;
   --transition: 0.3s ease;
   --nav-h: 58px;
 }
@@ -1227,6 +1227,132 @@ html, body {
     height: 300px; /* Fixed height for image card on mobile */
   }
 }
+
+/* ===== MEET OUR FOUNDER ===== */
+.founder-section {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.founder-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+}
+.founder-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1A2B50;
+  margin-bottom: 8px;
+}
+.founder-highlight {
+  color: #4A72FF;
+}
+.founder-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4A5568;
+}
+
+.founder-followers-box {
+  margin-top: 16px;
+  background: #F8F9FB;
+  padding: 24px 32px;
+  border-radius: 12px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  text-align: center;
+  align-self: flex-start; /* to match screenshot width */
+  min-width: 320px;
+}
+.followers-count {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4A72FF;
+}
+.social-icons-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+.social-icons-row svg {
+  color: #4A72FF;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.social-icons-row svg:hover {
+  transform: translateY(-2px);
+  color: #2b4cc4;
+}
+
+/* Founder Video Container */
+.founder-video-container {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+  aspect-ratio: 1; /* roughly square for the blob */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.founder-blob-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4A72FF;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+  animation: blob-morph 8s ease-in-out infinite alternate;
+}
+
+@keyframes blob-morph {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  100% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; }
+}
+
+.founder-video {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* If the video has a white background, it will hide the blob. 
+     If it is transparent, the blob will show. 
+     In case the video is opaque and we want the blob shape ON the video: */
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: blob-morph 8s ease-in-out infinite alternate;
+}
+
+@media (max-width: 900px) {
+  .founder-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .founder-followers-box {
+    align-self: center;
+    width: 100%;
+  }
+  .founder-content {
+    padding-right: 0;
+  }
+}
+
 /* ===== FAQ ===== */
 .faq { background: #0d0d0d; }
 .faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
