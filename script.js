@@ -200,12 +200,13 @@ const bentoSlides = [
 ];
 
 const faqs = [
-  { q: "What is the refund policy?", a: "We offer risk-free purchases across all courses. You can avail a full refund in 14 days of purchase, no questions asked. This is applicable across all courses and all plans." },
-  { q: "Are the courses conducted live?", a: "No, all the courses are self-paced and come with lifetime access. You can go through the course at your own pace." },
-  { q: "Do the courses have any live interaction?", a: "The premium plan of all the courses (except 'The Complete Guide To Starting Up' and 'The Art Of Cold Emailing') come with access to live group Q&A sessions with warikoo." },
-  { q: "Are there any criteria for joining the courses?", a: "Not at all! The courses are designed for anyone and everyone who want to learn." },
-  { q: "Can I enroll in multiple courses?", a: "Yes, go for it! There are no limits on the number of courses that you can take up." },
-  { q: "Is there a community that I can join?", a: "The premium plan for all courses includes access to a virtual chat-based community space where you can interact with other students, ask questions, and network." }
+  { q: "What is the refund policy?", a: "We offer risk-free purchases across all courses. You can avail a full refund in 14 days of purchase, no questions asked. This is applicable across all courses and all plans.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>` },
+  { q: "Are the courses conducted live?", a: "No, all the courses are self-paced and come with lifetime access. You can go through the course at your own pace.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>` },
+  { q: "Do the courses have any live interaction?", a: "The premium plan of all the courses (except 'The Complete Guide To Starting Up' and 'The Art Of Cold Emailing') come with access to live group Q&A sessions with warikoo.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
+  { q: "Are there any criteria for joining the courses?", a: "Not at all! The courses are designed for anyone and everyone who want to learn.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>` },
+  { q: "Can I enroll in multiple courses?", a: "Yes, go for it! There are no limits on the number of courses that you can take up.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>` },
+  { q: "Is there a community that I can join?", a: "The premium plan for all courses includes access to a virtual chat-based community space where you can interact with other students, ask questions, and network.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
+  { q: "Whom do I contact in case of any issues or concerns?", a: "Feel free to reach out to our support team for any queries or technical assistance.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true }
 ];
 
 // ===== TYPING ANIMATION =====
@@ -730,11 +731,20 @@ function renderFAQ() {
   list.innerHTML = faqs.map((f, i) => `
     <div class="faq-item reveal" id="faq-${i}">
       <button class="faq-question" onclick="toggleFAQ(${i})">
-        ${f.q}
-        <span class="faq-icon">+</span>
+        <div class="faq-q-left">
+          <span class="faq-q-icon">${f.icon}</span>
+          <span class="faq-q-text">${f.q}</span>
+        </div>
+        <span class="faq-icon-toggle">
+          <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          <svg class="icon-cross" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </span>
       </button>
       <div class="faq-answer" id="faq-answer-${i}">
-        <p>${f.a}</p>
+        <div class="faq-answer-inner">
+          <p>${f.a}</p>
+          ${f.hasBtn ? `<a href="#" class="faq-wa-btn">Need Support? WhatsApp Us</a>` : ''}
+        </div>
       </div>
     </div>
   `).join('');
