@@ -206,7 +206,7 @@ const faqs = [
   { q: "Are there any criteria for joining the courses?", a: "Not at all! The courses are designed for anyone and everyone who want to learn.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>` },
   { q: "Can I enroll in multiple courses?", a: "Yes, go for it! There are no limits on the number of courses that you can take up.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>` },
   { q: "Is there a community that I can join?", a: "The premium plan for all courses includes access to a virtual chat-based community space where you can interact with other students, ask questions, and network.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
-  { q: "Whom do I contact in case of any issues or concerns?", a: "Feel free to reach out to our support team for any queries or technical assistance.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true }
+  { q: "Whom do I contact in case of any issues or concerns?", a: "Feel free to reach out to our support team for any queries or technical assistance.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true, permanentOpen: true }
 ];
 
 // ===== TYPING ANIMATION =====
@@ -729,16 +729,18 @@ function renderFAQ() {
   const list = document.getElementById('faqList');
   if (!list) return;
   list.innerHTML = faqs.map((f, i) => `
-    <div class="faq-item reveal" id="faq-${i}">
-      <button class="faq-question" onclick="toggleFAQ(${i})">
+    <div class="faq-item reveal ${f.permanentOpen ? 'open permanent' : ''}" id="faq-${i}">
+      <button class="faq-question" ${f.permanentOpen ? '' : `onclick="toggleFAQ(${i})"`} style="${f.permanentOpen ? 'cursor: default;' : ''}">
         <div class="faq-q-left">
           <span class="faq-q-icon">${f.icon}</span>
           <span class="faq-q-text">${f.q}</span>
         </div>
+        ${f.permanentOpen ? '' : `
         <span class="faq-icon-toggle">
           <svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
           <svg class="icon-cross" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
         </span>
+        `}
       </button>
       <div class="faq-answer" id="faq-answer-${i}">
         <div class="faq-answer-inner">
@@ -748,16 +750,32 @@ function renderFAQ() {
       </div>
     </div>
   `).join('');
+
+  // Set initial height for permanent open items
+  faqs.forEach((f, i) => {
+    if (f.permanentOpen) {
+      const answer = document.getElementById(`faq-answer-${i}`);
+      setTimeout(() => {
+        if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      }, 0);
+    }
+  });
 }
 
 function toggleFAQ(index) {
   const item = document.getElementById(`faq-${index}`);
+  if (item.classList.contains('permanent')) return;
+
   const answer = document.getElementById(`faq-answer-${index}`);
   const isOpen = item.classList.contains('open');
+  
   document.querySelectorAll('.faq-item').forEach(el => {
-    el.classList.remove('open');
-    el.querySelector('.faq-answer').style.maxHeight = null;
+    if (!el.classList.contains('permanent')) {
+      el.classList.remove('open');
+      el.querySelector('.faq-answer').style.maxHeight = null;
+    }
   });
+  
   if (!isOpen) {
     item.classList.add('open');
     answer.style.maxHeight = answer.scrollHeight + 'px';
