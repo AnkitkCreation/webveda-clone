@@ -1,124 +1,134 @@
 // ===== COURSES DATA =====
 const courses = [
   {
-    tab: ['all','launchpad'],
+    tabs: ['all','launchpad'],
     headerSup: 'BUILD YOUR ONLINE', headerName: 'TEACHING\nBUSINESS',
     icon: '🎓',
-    img: 'https://placehold.co/280x210/f5a623/ffffff?text=Teaching+Business',
+    img: 'assets/teaching business.jpg',
     badge: null,
     title: 'Take Your Teaching Online',
     lang: 'In English', students: '4.8K+ Students',
-    price: '₹1799', ctaColor: '#f5a623'
+    price: '₹1799', ctaColor: '#f5a623', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','launchpad'],
+    tabs: ['all','launchpad'],
     headerSup: 'HOW TO', headerName: 'YOUTUBE',
     icon: '▶️',
-    img: 'https://placehold.co/280x210/cc0000/ffffff?text=YouTube',
+    img: 'assets/youtube.jpg',
     badge: null,
     title: 'Grow & Monetize Your Channel',
     lang: 'In English & Hindi', students: '34K+ Students',
-    price: '₹1799', ctaColor: '#cc0000'
+    price: '₹1799', ctaColor: '#cc0000', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','launchpad'],
+    tabs: ['all','launchpad'],
     headerSup: 'INSTAGRAM MASTERY', headerName: 'FOR CREATORS',
     icon: '📸',
-    img: 'https://placehold.co/280x210/e1306c/ffffff?text=Instagram',
+    img: 'assets/instrgram mastry for creators.jpg',
     badge: null,
     title: 'Master Instagram Growth',
     lang: 'In English & Hindi', students: '19K+ Students',
-    price: '₹1799', ctaColor: '#e1306c'
+    price: '₹1799', ctaColor: '#e1306c', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','launchpad'],
+    tabs: ['all','launchpad'],
     headerSup: 'LEARN TO', headerName: 'LINKEDIN',
     icon: '💼',
-    img: 'https://placehold.co/280x210/0077b5/ffffff?text=LinkedIn',
+    img: 'assets/linkdin.jpg',
     badge: null,
     title: 'Grow Professionally Through LinkedIn',
     lang: 'In English', students: '4K+ Students',
-    price: '₹1799', ctaColor: '#0077b5'
+    price: '₹1799', ctaColor: '#0077b5', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','productivity'],
+    tabs: ['all','productivity'],
     headerSup: 'THE', headerName: 'AI ADVANTAGE\nCOURSE',
     icon: '💡',
-    img: 'https://placehold.co/280x210/f5c518/222222?text=AI+Course',
+    img: 'assets/ai advantage cousre.png',
     badge: 'Newly Launched!',
     title: 'Save Time And Money With AI',
     lang: 'In Hindi', students: 'Newly Launched!',
     price: '₹399', ctaColor: '#f5c518', ctaTextColor: '#111'
   },
   {
-    tab: ['all','productivity'],
+    tabs: ['all','productivity'],
     headerSup: 'THE ULTIMATE GUIDE TO', headerName: 'EFFECTIVE\nCOMMUNICATION',
     icon: '💬',
-    img: 'https://placehold.co/280x210/7c5cbf/ffffff?text=Communication',
+    img: 'assets/effetive communicatin.jpg',
     badge: null,
     title: 'Master Communication Skills',
     lang: 'In English & Hindi', students: '94K+ Students',
-    price: '₹849', ctaColor: '#7c5cbf'
+    price: '₹849', ctaColor: '#7c5cbf', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','productivity'],
+    tabs: ['all','productivity'],
     headerSup: 'TAKE CHARGE OF', headerName: 'YOUR TIME',
     icon: '⏳',
-    img: 'https://placehold.co/280x210/f5a623/ffffff?text=Time+Management',
+    img: 'assets/take charge of your time.jpg',
     badge: null,
     title: 'Get More Done In Less Time',
     lang: 'In English & Hindi', students: '260K Students',
-    price: '₹599', ctaColor: '#f5a623'
+    price: '₹599', ctaColor: '#f5a623', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','growth'],
+    tabs: ['all','growth'],
     headerSup: 'THE ULTIMATE', headerName: 'FREELANCING\nGUIDE',
     icon: '💰',
-    img: 'https://placehold.co/280x210/27ae60/ffffff?text=Freelancing',
+    img: 'assets/freelancing guiude.png',
     badge: 'Newly Launched!',
     title: 'Start Your Freelancing Career',
     lang: 'In English', students: 'Newly Launched!',
-    price: '₹3499', ctaColor: '#27ae60'
+    price: '₹3499', ctaColor: '#27ae60', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','money'],
-    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'PERSONAL\nFINANCE',
+    tabs: ['all','money'],
+    headerSup: 'TAKE CHARGE OF', headerName: 'YOUR MONEY',
     icon: '📊',
-    img: 'https://placehold.co/280x210/2980b9/ffffff?text=Personal+Finance',
+    img: 'assets/take charge of yor money.jpg',
     badge: null,
-    title: 'Master Your Money',
+    title: 'Master Your Personal Finance',
     lang: 'In English & Hindi', students: '120K+ Students',
-    price: '₹1999', ctaColor: '#2980b9'
+    price: '₹1999', ctaColor: '#2980b9', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','money'],
+    tabs: ['all','money'],
     headerSup: 'THE COMPLETE GUIDE TO', headerName: 'STARTING UP',
     icon: '🚀',
-    img: 'https://placehold.co/280x210/e74c3c/ffffff?text=Starting+Up',
+    img: 'assets/starting up.jpg',
     badge: null,
     title: 'Launch Your Own Business',
     lang: 'In English', students: '55K+ Students',
-    price: '₹1999', ctaColor: '#e74c3c'
+    price: '₹1999', ctaColor: '#e74c3c', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','growth'],
+    tabs: ['all','growth'],
     headerSup: 'THE ART OF', headerName: 'COLD EMAILING',
     icon: '📧',
-    img: 'https://placehold.co/280x210/16a085/ffffff?text=Cold+Emailing',
+    img: 'assets/cold emails.jpg',
     badge: null,
     title: 'Write Emails That Get Replies',
     lang: 'In English', students: '30K+ Students',
-    price: '₹999', ctaColor: '#16a085'
+    price: '₹999', ctaColor: '#16a085', ctaTextColor: '#fff'
   },
   {
-    tab: ['all','growth'],
-    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'NETWORKING',
-    icon: '🤝',
-    img: 'https://placehold.co/280x210/8e44ad/ffffff?text=Networking',
+    tabs: ['all','growth'],
+    headerSup: 'MAKE WRITING', headerName: 'YOUR CAREER',
+    icon: '✍️',
+    img: 'assets/make writing your carrer.jpg',
     badge: null,
-    title: 'Build Meaningful Connections',
+    title: 'Build a Career in Writing',
     lang: 'In English', students: '22K+ Students',
-    price: '₹1499', ctaColor: '#8e44ad'
+    price: '₹1499', ctaColor: '#8e44ad', ctaTextColor: '#fff'
+  },
+  {
+    tabs: ['all','growth'],
+    headerSup: 'THE COMPLETE', headerName: 'CAREER TOOLKIT',
+    icon: '🧰',
+    img: 'assets/carrer tool kit.jpg',
+    badge: null,
+    title: 'Accelerate Your Career Growth',
+    lang: 'In English', students: '18K+ Students',
+    price: '₹1299', ctaColor: '#2c3e50', ctaTextColor: '#fff'
   }
 ];
 
@@ -334,29 +344,25 @@ function hexToRgba(hex, alpha) {
 
 // ===== COURSES CAROUSEL =====
 let activeTab = 'all';
-let carouselOffset = 0;   // px translateX (negative = scrolled right)
+let carouselOffset = 0;
 
 function buildCourseCard(c) {
-  const headerLines = c.headerName.split('\n');
-  const badgeHtml = c.badge
-    ? `<div class="card-badge badge-new">
-        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
-        ${c.badge}
-       </div>`
+  const lines = c.headerName.split('\n');
+  const badge = c.badge
+    ? `<div class="card-badge">⚡ ${c.badge}</div>`
     : '';
-  const ctaText = c.ctaTextColor ? c.ctaTextColor : '#fff';
   return `
-    <div class="course-card" data-tabs="${c.tab.join(',')}">
+    <div class="course-card" data-tabs="${c.tabs.join(',')}">
       <div class="card-header">
         <div class="card-header-icon">${c.icon}</div>
         <div class="card-header-text">
           <span class="card-header-sup">${c.headerSup}</span>
-          <span class="card-header-name">${headerLines.join('<br>')}</span>
+          <span class="card-header-name">${lines.join('<br>')}</span>
         </div>
       </div>
       <div class="card-image-wrap">
         <img src="${c.img}" alt="${c.title}" loading="lazy" />
-        ${badgeHtml}
+        ${badge}
         <div class="card-hover-overlay">
           <div class="card-overlay-title">${c.title}</div>
           <div class="card-overlay-meta">
@@ -378,49 +384,64 @@ function buildCourseCard(c) {
           </span>
         </div>
       </div>
-      <div class="card-cta" style="background:${c.ctaColor};color:${ctaText}">
+      <div class="card-cta" style="background:${c.ctaColor};color:${c.ctaTextColor}">
         Starts at ${c.price} &nbsp;→
       </div>
     </div>`;
 }
 
-function getFilteredCourses() {
-  return courses.filter(c => c.tab.includes(activeTab));
-}
-
-function renderCoursesCarousel() {
+function renderAllCards() {
   const carousel = document.getElementById('coursesCarousel');
   if (!carousel) return;
-  const filtered = getFilteredCourses();
-  carousel.innerHTML = filtered.map(buildCourseCard).join('');
+  // Render ALL cards once — filter just shows/hides
+  carousel.innerHTML = courses.map(buildCourseCard).join('');
+}
+
+function applyFilter() {
+  const carousel = document.getElementById('coursesCarousel');
+  if (!carousel) return;
+  carousel.querySelectorAll('.course-card').forEach(card => {
+    const tabs = card.dataset.tabs.split(',');
+    card.classList.toggle('hidden', !tabs.includes(activeTab));
+  });
+  // Reset scroll
   carouselOffset = 0;
+  carousel.style.transition = 'none';
   carousel.style.transform = 'translateX(0)';
   updateArrows();
 }
 
-function getCardWidth() {
+function getVisibleCardWidth() {
   const carousel = document.getElementById('coursesCarousel');
-  if (!carousel) return 260;
-  const card = carousel.querySelector('.course-card');
-  if (!card) return 260;
-  return card.offsetWidth + 18; // card width + gap
+  if (!carousel) return 256;
+  const card = carousel.querySelector('.course-card:not(.hidden)');
+  if (!card) return 256;
+  const style = getComputedStyle(carousel);
+  const gap = parseFloat(style.gap) || 16;
+  return card.offsetWidth + gap;
 }
 
 function getMaxOffset() {
   const carousel = document.getElementById('coursesCarousel');
   if (!carousel) return 0;
-  const outer = carousel.parentElement;
-  const totalW = carousel.scrollWidth;
-  const visibleW = outer.offsetWidth;
-  return Math.max(0, totalW - visibleW + 8);
+  const clip = document.querySelector('.courses-clip');
+  if (!clip) return 0;
+  // Total width of visible cards
+  const visibleCards = [...carousel.querySelectorAll('.course-card:not(.hidden)')];
+  if (!visibleCards.length) return 0;
+  const gap = 16;
+  const totalW = visibleCards.reduce((sum, c) => sum + c.offsetWidth + gap, 0) - gap;
+  const clipW = clip.offsetWidth;
+  return Math.max(0, totalW - clipW);
 }
 
 function updateArrows() {
   const next = document.getElementById('carouselNext');
   const prev = document.getElementById('carouselPrev');
   if (!next || !prev) return;
-  prev.style.display = carouselOffset < -2 ? 'flex' : 'none';
-  next.disabled = Math.abs(carouselOffset) >= getMaxOffset() - 2;
+  const max = getMaxOffset();
+  prev.disabled = carouselOffset >= 0;
+  next.disabled = Math.abs(carouselOffset) >= max - 1;
 }
 
 function initCarousel() {
@@ -430,31 +451,28 @@ function initCarousel() {
   if (!next || !prev || !carousel) return;
 
   next.addEventListener('click', () => {
-    const step = getCardWidth() * 2;
+    const step = getVisibleCardWidth() * 2;
     const max = getMaxOffset();
-    carouselOffset = Math.max(-(max), carouselOffset - step);
+    carouselOffset = Math.max(-max, carouselOffset - step);
     carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
     carousel.style.transform = `translateX(${carouselOffset}px)`;
     updateArrows();
   });
 
   prev.addEventListener('click', () => {
-    const step = getCardWidth() * 2;
+    const step = getVisibleCardWidth() * 2;
     carouselOffset = Math.min(0, carouselOffset + step);
     carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
     carousel.style.transform = `translateX(${carouselOffset}px)`;
     updateArrows();
   });
 
-  // Touch/swipe support
-  let touchStartX = 0;
-  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  // Touch swipe
+  let tx = 0;
+  carousel.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
   carousel.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) next.click();
-      else prev.click();
-    }
+    const diff = tx - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next.click() : prev.click();
   }, { passive: true });
 }
 
@@ -467,7 +485,7 @@ function initTabs() {
     tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     activeTab = btn.dataset.tab;
-    renderCoursesCarousel();
+    applyFilter();
   });
 }
 
@@ -582,8 +600,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoWrap = document.querySelector('.hero-video-wrap');
   if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
 
-  // Courses
-  renderCoursesCarousel();
+  // Courses — render all cards once, then filter
+  renderAllCards();
+  applyFilter();   // shows 'all' by default
   initCarousel();
   initTabs();
 
