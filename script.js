@@ -782,6 +782,13 @@ function toggleFAQ(index) {
   }
 }
 
+// ===== HERO VIDEO LOGIC =====
+function playHeroVideo() {
+  const container = document.getElementById('heroVideo');
+  if (!container) return;
+  container.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/bC21_0l5z8w?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:14px; position:absolute; top:0; left:0;"></iframe>`;
+}
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
