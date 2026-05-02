@@ -605,7 +605,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCarousel();
   initTabs();
 
-  renderWhoFor();
   renderTestimonials();
   renderFAQ();
   observeReveal();
