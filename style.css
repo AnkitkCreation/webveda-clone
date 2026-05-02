@@ -70,7 +70,7 @@ html, body {
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 24px;
+  padding: 100px 24px;
 }
 .section-header {
   text-align: center;
@@ -319,14 +319,14 @@ html, body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px;
+  padding: 72px 24px 40px;
   position: relative;
   z-index: 1;
 }
 
 /* Heading */
 .hero-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.9rem, 4.5vw, 2.9rem);
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
@@ -506,7 +506,7 @@ html, body {
 /* ===== COURSES ===== */
 .courses {
   background: #ffffff;
-  padding: 80px 0;
+  padding: 72px 0 60px;
   width: 100%;
   overflow: hidden;
 }
@@ -523,7 +523,7 @@ html, body {
   margin-bottom: 20px;
 }
 .courses-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 800;
   color: #111;
   line-height: 1.2;
@@ -791,7 +791,7 @@ html, body {
 /* ===== WHY WEBVEDA ===== */
 .why-wv {
   background: #f0f4ff;
-  padding: 80px 24px;
+  padding: 72px 24px 80px;
   width: 100%;
 }
 .why-wv-container {
@@ -800,7 +800,7 @@ html, body {
 }
 .why-wv-title {
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
   font-weight: 800;
   color: #111827;
   margin-bottom: 52px;
@@ -874,7 +874,7 @@ html, body {
   background: #0d1b3e;
   background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
   background-size: 32px 32px;
-  padding: 80px 24px;
+  padding: 72px 24px 80px;
   width: 100%;
   position: relative;
 }
@@ -894,7 +894,7 @@ html, body {
 }
 .who-for-title {
   text-align: center;
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
   font-weight: 800;
   color: #ffffff;
   margin-bottom: 48px;
@@ -962,7 +962,7 @@ html, body {
 /* ===== BENTO GRID TESTIMONIALS ===== */
 .bento-testimonials {
   background: #F8F9FB;
-  padding: 0;
+  padding: 80px 0;
   overflow: hidden;
 }
 
@@ -971,7 +971,7 @@ html, body {
   margin-bottom: 40px;
 }
 .bento-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   color: #1A2B50;
   line-height: 1.2;
@@ -1230,6 +1230,7 @@ html, body {
 
 /* ===== MEET OUR FOUNDER ===== */
 .founder-section {
+  padding: 80px 0;
   background-color: #fff;
 }
 .founder-grid {
@@ -1247,7 +1248,7 @@ html, body {
   padding-right: 20px;
 }
 .founder-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 700;
   color: #1A2B50;
   margin-bottom: 8px;
