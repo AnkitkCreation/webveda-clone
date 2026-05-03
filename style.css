@@ -1353,6 +1353,87 @@ html, body {
   }
 }
 
+/* ===== CREATORS MARQUEE ===== */
+.creators-marquee {
+  background: #f8fafc;
+  padding: 100px 0;
+  text-align: center;
+}
+.marquee-header {
+  margin-bottom: 50px;
+}
+.marquee-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+.marquee-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 600px;
+  overflow: hidden;
+  padding: 0 24px;
+  /* Fading top and bottom */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: scroll-vertical linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-track-1 { animation-duration: 40s; }
+.marquee-track-2 { animation-duration: 55s; }
+.marquee-track-3 { animation-duration: 45s; }
+
+@keyframes scroll-vertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.creator-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.creator-text {
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.6;
+}
+.creator-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.creator-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.creator-name {
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 0.95rem;
+}
+.creator-handle {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
 /* ===== FAQ ===== */
 .faq {
   background: #ffffff;
@@ -1702,4 +1783,14 @@ html, body {
   .courses { padding: 56px 0 48px; }
   .courses-tabs { gap: 6px; }
   .tab-btn { padding: 6px 14px; font-size: 0.8rem; }
+}
+
+@media (max-width: 900px) {
+  .marquee-container { grid-template-columns: repeat(2, 1fr); }
+  .marquee-track-3 { display: none; }
+}
+
+@media (max-width: 600px) {
+  .marquee-container { grid-template-columns: 1fr; }
+  .marquee-track-2 { display: none; }
 }

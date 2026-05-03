@@ -724,6 +724,58 @@ function startThoughtAutoplay() {
   }, 5000); // slightly faster than review slide
 }
 
+// ===== CREATORS MARQUEE =====
+const creatorsData = [
+  { text: "Most of what I do is a skill that I developed through practice, not education. So it was wonderful to contribute to a platform like WebVeda that truly values real-world skills.", name: "Raj Shamani", handle: "@rajshamani", img: "assets/review1.png" },
+  { text: "WebVeda is designed to set you up to win in your personal life and at work. These are all the skills you need to be a top performer and ace life. I can't recommend it enough!", name: "Niharikaa Kaur", handle: "@niharikaasodhi", img: "assets/review2.png" },
+  { text: "WebVeda will teach you what traditional education won't: how to look beyond the mainstream and build something meaningful for yourself.", name: "Anabelle Colaco", handle: "@anabellecolaco", img: "assets/review3.png" },
+  { text: "As a business owner, I know how important it is to be a master of many skills. WebVeda sets you up for exactly that - excellence across the many facets you need in your professional and personal life.", name: "Shreya Pattar", handle: "@shreyapattar", img: "assets/review4.png" },
+  { text: "I am a dancer, teacher, creator, and supporter of WebVeda! The courses on WebVeda have the potential to transform your life. All you have to do is take the first step.", name: "Radhika Warikoo", handle: "@a.dancers.tale", img: "assets/review5.png" },
+  { text: "Ankur teaches with clarity, honesty, and transparency. I am sure that their students will learn significantly, grow, and become excellent individuals.", name: "Neeraj Arora", handle: "@neerajaroraofficial", img: "assets/review1.png" },
+  { text: "A phenomenal platform that focuses on what truly matters in building a career.", name: "Vaibhav Sisinty", handle: "@vaibhavsisinty", img: "assets/review2.png" },
+  { text: "The practical knowledge shared here is unmatched. It's exactly what the current generation needs to navigate the modern work landscape.", name: "Manish Pandey", handle: "@join2manish", img: "assets/review3.png" },
+  { text: "It's rare to find education that actually maps to real-world scenarios. Highly recommend to everyone.", name: "Aman Dhattarwal", handle: "@amandhattarwal", img: "assets/review4.png" }
+];
+
+function initCreatorsMarquee() {
+  const container = document.getElementById('marqueeContainer');
+  if (!container) return;
+
+  const col1 = [creatorsData[0], creatorsData[3], creatorsData[6]];
+  const col2 = [creatorsData[1], creatorsData[4], creatorsData[7]];
+  const col3 = [creatorsData[2], creatorsData[5], creatorsData[8]];
+  const cols = [col1, col2, col3];
+
+  let html = '';
+  cols.forEach((col, index) => {
+    let cardsHtml = '';
+    col.forEach(c => {
+      cardsHtml += `
+        <div class="creator-card">
+          <p class="creator-text">${c.text}</p>
+          <div class="creator-user">
+            <img src="${c.img}" alt="${c.name}" class="creator-avatar" />
+            <div class="creator-info">
+              <div class="creator-name">${c.name}</div>
+              <div class="creator-handle">${c.handle}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
+    // Duplicate cardsHtml for infinite scroll effect (0 to -50%)
+    html += `
+      <div class="marquee-track marquee-track-${index + 1}">
+        ${cardsHtml}
+        ${cardsHtml}
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
 // ===== RENDER FAQ =====
 function renderFAQ() {
   const list = document.getElementById('faqList');
@@ -832,7 +884,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     heroVideo.addEventListener('click', () => {
-      heroVideo.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/aL27fX5qvCw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`;
+      heroVideo.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xuP4g7IDgDM?si=WGbeJPdBACSYaFRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`;
       // remove the orbit effect from wrapper when video starts
       const orbitCanvas = videoWrap.querySelector('canvas');
       if (orbitCanvas) orbitCanvas.remove();
@@ -846,6 +898,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
 
   initBentoGrid();
+  initCreatorsMarquee();
   renderFAQ();
   observeReveal();
 });
