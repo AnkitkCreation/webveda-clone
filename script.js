@@ -782,13 +782,6 @@ function toggleFAQ(index) {
   }
 }
 
-// ===== HERO VIDEO LOGIC =====
-function playHeroVideo() {
-  const container = document.getElementById('heroVideo');
-  if (!container) return;
-  container.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/bC21_0l5z8w?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius:14px; position:absolute; top:0; left:0;"></iframe>`;
-}
-
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -835,6 +828,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const videoWrap = document.querySelector('.hero-video-wrap');
   if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
+
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    heroVideo.addEventListener('click', () => {
+      heroVideo.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/aL27fX5qvCw?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`;
+      // remove the orbit effect from wrapper when video starts
+      const orbitCanvas = videoWrap.querySelector('canvas');
+      if (orbitCanvas) orbitCanvas.remove();
+    });
+  }
 
   // Courses — render all cards once, then filter
   renderAllCards();
