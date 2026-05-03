@@ -662,7 +662,7 @@ html, body {
   overflow: hidden;
 }
 .card-header-sup {
-  font-size: 0.52rem;
+  font-size: 0.65rem;
   font-weight: 500;
   color: #999;
   text-transform: uppercase;
@@ -672,7 +672,7 @@ html, body {
   text-overflow: ellipsis;
 }
 .card-header-name {
-  font-size: 0.68rem;
+  font-size: 0.85rem;
   font-weight: 800;
   color: #111;
   text-transform: uppercase;
@@ -734,13 +734,13 @@ html, body {
   left: 8px;
   background: #3d5af1;
   color: #fff;
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   z-index: 3;
   white-space: nowrap;
 }
@@ -751,32 +751,32 @@ html, body {
   flex: 1;
 }
 .card-title {
-  font-size: 0.76rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #111;
   line-height: 1.35;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .card-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.63rem;
+  gap: 12px;
+  font-size: 0.85rem;
   color: #666;
   flex-wrap: wrap;
 }
 .card-meta span {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 .card-meta svg { width: 9px; height: 9px; opacity: 0.65; flex-shrink: 0; }
 
 /* Card CTA */
 .card-cta {
-  margin-top: 8px;
-  padding: 9px 12px;
-  font-size: 0.74rem;
+  margin-top: 12px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   display: flex;
@@ -1389,9 +1389,9 @@ html, body {
 .marquee-track:hover {
   animation-play-state: paused;
 }
-.marquee-track-1 { animation-duration: 40s; }
-.marquee-track-2 { animation-duration: 55s; }
-.marquee-track-3 { animation-duration: 45s; }
+.marquee-track-1 { animation-duration: 20s; }
+.marquee-track-2 { animation-duration: 35s; }
+.marquee-track-3 { animation-duration: 25s; }
 
 @keyframes scroll-vertical {
   0% { transform: translateY(0); }
@@ -1777,12 +1777,15 @@ html, body {
   .hero-cta { font-size: 0.85rem; padding: 13px 24px; }
   .hero-video-wrap { width: 92vw; margin-bottom: -50px; }
   .hero-bottom-cut svg { height: 120px; }
-  /* On mobile: cards fill ~75% of screen width */
-  .course-card { flex: 0 0 72vw; width: 72vw; }
-  .courses-container { padding: 0 40px; }
+  /* On mobile: cards fill width appropriately */
+  .course-card { flex: 0 0 88vw; width: 88vw; max-width: 340px; }
+  .courses-container { padding: 0 16px; }
   .courses { padding: 56px 0 48px; }
-  .courses-tabs { gap: 6px; }
-  .tab-btn { padding: 6px 14px; font-size: 0.8rem; }
+  .courses-tabs { gap: 6px; flex-wrap: wrap; justify-content: center; }
+  .tab-btn { padding: 8px 16px; font-size: 0.9rem; }
+  
+  /* Make carousel arrows smaller/overlay on mobile if needed, or just let them sit beside the larger card */
+  .carousel-arrow { width: 32px; height: 32px; }
 }
 
 @media (max-width: 900px) {
