@@ -500,7 +500,7 @@ function initCarousel() {
   if (!next || !prev || !carousel) return;
 
   next.addEventListener('click', () => {
-    const step = getVisibleCardWidth() * 2;
+    const step = getVisibleCardWidth();
     const max = getMaxOffset();
     carouselOffset = Math.max(-max, carouselOffset - step);
     carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
@@ -509,7 +509,7 @@ function initCarousel() {
   });
 
   prev.addEventListener('click', () => {
-    const step = getVisibleCardWidth() * 2;
+    const step = getVisibleCardWidth();
     carouselOffset = Math.min(0, carouselOffset + step);
     carousel.style.transition = 'transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94)';
     carousel.style.transform = `translateX(${carouselOffset}px)`;

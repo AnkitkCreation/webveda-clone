@@ -1757,7 +1757,8 @@ html, body {
   .course-card { flex: 0 0 190px; width: 190px; }
   
   /* Hero tablet gap fix */
-  .hero-inner { padding: 80px 24px 40px; }
+  .hero { min-height: auto; }
+  .hero-inner { padding: 80px 24px 60px; flex: none; }
   .hero-video-wrap { margin-bottom: -60px; }
   .hero-bottom-cut { margin-top: -40px; }
   .hero-bottom-cut svg { height: 140px; }
@@ -1790,9 +1791,8 @@ html, body {
   .courses { padding: 56px 0 48px; }
   .courses-tabs { gap: 6px; flex-wrap: wrap; justify-content: center; }
   .tab-btn { padding: 8px 16px; font-size: 0.9rem; }
-  
-  /* Make carousel arrows smaller/overlay on mobile if needed, or just let them sit beside the larger card */
-  .carousel-arrow { width: 32px; height: 32px; }
+  /* Hide arrows on mobile to maximize card visibility, users can swipe */
+  .carousel-arrow { display: none; }
 }
 
 @media (max-width: 900px) {
