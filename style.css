@@ -1447,9 +1447,7 @@ html, body {
   grid-template-columns: 1fr 1.5fr;
   gap: 60px;
 }
-.faq-left {
-  /* Let it stretch vertically */
-}
+  /* .faq-left is intentionally left without base styles to let it stretch, but removed to avoid empty ruleset warning */
 .faq-sticky-title {
   position: sticky;
   top: 120px;
