@@ -1755,6 +1755,13 @@ html, body {
   .nav-links, .nav-actions { display: none; }
   .hamburger { display: flex; }
   .course-card { flex: 0 0 190px; width: 190px; }
+  
+  /* Hero tablet gap fix */
+  .hero-inner { padding: 80px 24px 40px; }
+  .hero-video-wrap { margin-bottom: -60px; }
+  .hero-bottom-cut { margin-top: -40px; }
+  .hero-bottom-cut svg { height: 140px; }
+  .hero-title { font-size: clamp(2rem, 4vw, 3rem); }
 }
 
 @media (max-width: 900px) {
