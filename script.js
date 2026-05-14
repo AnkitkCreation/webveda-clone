@@ -1,9 +1,9 @@
 // ===== COURSES DATA =====
 const courses = [
   {
-    tabs: ['all','launchpad'],
+    tabs: ['all','guides'],
     headerSup: 'ESSENTIAL', headerName: 'NEW PARENT\nGUIDE',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 5 6.3"/><path d="M12 2.1a9 9 0 0 1 7 4.2"/><path d="M5 6.3a9 9 0 0 1 7-4.2"/></svg>`,
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-5.34"/><path d="M18 7H9"/><path d="M18 11H9"/><path d="M18 15H9"/></svg>`,
     img: 'assets/newborn_care.png',
     badge: 'Best Seller',
     title: 'Newborn Care Basics',
@@ -11,17 +11,27 @@ const courses = [
     price: '₹199', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
   },
   {
-    tabs: ['all','launchpad'],
+    tabs: ['all','guides'],
+    headerSup: 'VITAL', headerName: 'NUTRITION\n& DIET',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 11 6A7 7 0 0 1 11 20Z"/><path d="M11 9A3 3 0 0 1 11 15A3 3 0 0 1 11 9Z"/><path d="M18 12h3"/><path d="M18 9l3-3"/><path d="M18 15l3 3"/></svg>`,
+    img: 'assets/review2.png',
+    badge: 'New',
+    title: 'Toddler Nutrition Guide',
+    lang: 'Video Series', students: 'Meal Plans Included',
+    price: '₹499', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
+  },
+  {
+    tabs: ['all','coaching'],
     headerSup: 'PREMIUM', headerName: 'PERSONALIZED\nCOACHING',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
     img: 'assets/Doctor_talking_with_patient.jpeg',
     badge: null,
-    title: 'The Premium Parenting Pack',
+    title: 'Premium Parenting Pack',
     lang: 'Interactive Sessions', students: 'Face-to-Face',
     price: '₹2599', ctaColor: '#27ae60', ctaTextColor: '#fff'
   },
   {
-    tabs: ['all','launchpad'],
+    tabs: ['all','coaching'],
     headerSup: 'VIP', headerName: 'COMPLETE FAMILY\nECOSYSTEM',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
     img: 'assets/dr_abhishek_tiwari.png',
@@ -316,29 +326,22 @@ function buildCourseCard(c) {
       <div class="card-image-wrap">
         <img src="${c.img}" alt="${c.title}" loading="lazy" />
         ${badge}
-        <div class="card-hover-overlay">
-          <div class="card-overlay-title">${c.title}</div>
-          <div class="card-overlay-meta">
-            <span><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> ${c.lang}</span>
-            <span><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> ${c.students}</span>
-          </div>
-        </div>
       </div>
       <div class="card-body">
         <div class="card-title">${c.title}</div>
         <div class="card-meta">
           <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>
             ${c.lang}
           </span>
           <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
             ${c.students}
           </span>
         </div>
       </div>
       <div class="card-cta" style="background:${c.ctaColor};color:${c.ctaTextColor}">
-        Starts at ${c.price} &nbsp;→
+        Get Started &bull; ${c.price} &nbsp;→
       </div>
     </div>`;
 }
@@ -741,7 +744,7 @@ function toggleFAQ(index) {
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
+}, { passive: true });
 
 // ===== HAMBURGER =====
 const hamburger = document.getElementById('hamburger');
@@ -757,14 +760,12 @@ mobileMenu.querySelectorAll('a').forEach(a => {
   });
 });
 
-// ===== SCROLL REVEAL =====
+// ===== SCROLL REVEAL (Optimized) =====
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const siblings = entry.target.parentElement.querySelectorAll('.reveal');
-      let delay = 0;
-      siblings.forEach((el, idx) => { if (el === entry.target) delay = idx * 80; });
-      setTimeout(() => entry.target.classList.add('visible'), delay);
+      // Use a fixed delay or just show immediately to reduce lag
+      entry.target.classList.add('visible');
       revealObserver.unobserve(entry.target);
     }
   });
@@ -778,11 +779,13 @@ function observeReveal() {
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(typeLoop, 400);
 
-  const ctaBtn = document.querySelector('.hero-cta');
-  if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.28, 0.20, 5);
+  // Comet orbits disabled temporarily to fix scrolling lag reported by user
+  // const ctaBtn = document.querySelector('.hero-cta');
+  // if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.28, 0.20, 5);
 
-  const videoWrap = document.querySelector('.hero-video-wrap');
-  if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
+  // const videoWrap = document.querySelector('.hero-video-wrap');
+  // if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
+
 
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
