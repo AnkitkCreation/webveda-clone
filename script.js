@@ -2,215 +2,118 @@
 const courses = [
   {
     tabs: ['all','launchpad'],
-    headerSup: 'BUILD YOUR ONLINE', headerName: 'TEACHING\nBUSINESS',
-    icon: '🎓',
-    img: 'assets/teaching business.jpg',
-    badge: null,
-    title: 'Take Your Teaching Online',
-    lang: 'In English', students: '4.8K+ Students',
-    price: '₹1799', ctaColor: '#f5a623', ctaTextColor: '#fff'
+    headerSup: 'ESSENTIAL', headerName: 'NEW PARENT\nGUIDE',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 5 6.3"/><path d="M12 2.1a9 9 0 0 1 7 4.2"/><path d="M5 6.3a9 9 0 0 1 7-4.2"/></svg>`,
+    img: 'assets/newborn_care.png',
+    badge: 'Best Seller',
+    title: 'Newborn Care Basics',
+    lang: 'In Hindi & English', students: '25K+ Parents Mentored',
+    price: '₹199', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
   },
   {
     tabs: ['all','launchpad'],
-    headerSup: 'HOW TO', headerName: 'YOUTUBE',
-    icon: '▶️',
-    img: 'assets/youtube.jpg',
+    headerSup: 'PREMIUM', headerName: 'PERSONALIZED\nCOACHING',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    img: 'assets/Doctor_talking_with_patient.jpeg',
     badge: null,
-    title: 'Grow & Monetize Your Channel',
-    lang: 'In English & Hindi', students: '34K+ Students',
-    price: '₹1799', ctaColor: '#cc0000', ctaTextColor: '#fff'
+    title: 'The Premium Parenting Pack',
+    lang: 'Interactive Sessions', students: 'Face-to-Face',
+    price: '₹2599', ctaColor: '#27ae60', ctaTextColor: '#fff'
   },
   {
     tabs: ['all','launchpad'],
-    headerSup: 'INSTAGRAM MASTERY', headerName: 'FOR CREATORS',
-    icon: '📸',
-    img: 'assets/instrgram mastry for creators.jpg',
-    badge: null,
-    title: 'Master Instagram Growth',
-    lang: 'In English & Hindi', students: '19K+ Students',
-    price: '₹1799', ctaColor: '#e1306c', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','launchpad'],
-    headerSup: 'LEARN TO', headerName: 'LINKEDIN',
-    icon: '💼',
-    img: 'assets/linkdin.jpg',
-    badge: null,
-    title: 'Grow Professionally Through LinkedIn',
-    lang: 'In English', students: '4K+ Students',
-    price: '₹1799', ctaColor: '#0077b5', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','productivity'],
-    headerSup: 'THE', headerName: 'AI ADVANTAGE\nCOURSE',
-    icon: '💡',
-    img: 'assets/ai advantage cousre.png',
-    badge: 'Newly Launched!',
-    title: 'Save Time And Money With AI',
-    lang: 'In Hindi', students: 'Newly Launched!',
-    price: '₹399', ctaColor: '#f5c518', ctaTextColor: '#111'
-  },
-  {
-    tabs: ['all','productivity'],
-    headerSup: 'THE ULTIMATE GUIDE TO', headerName: 'EFFECTIVE\nCOMMUNICATION',
-    icon: '💬',
-    img: 'assets/effetive communicatin.jpg',
-    badge: null,
-    title: 'Master Communication Skills',
-    lang: 'In English & Hindi', students: '94K+ Students',
-    price: '₹849', ctaColor: '#7c5cbf', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','productivity'],
-    headerSup: 'TAKE CHARGE OF', headerName: 'YOUR TIME',
-    icon: '⏳',
-    img: 'assets/take charge of your time.jpg',
-    badge: null,
-    title: 'Get More Done In Less Time',
-    lang: 'In English & Hindi', students: '260K Students',
-    price: '₹599', ctaColor: '#f5a623', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','growth'],
-    headerSup: 'THE ULTIMATE', headerName: 'FREELANCING\nGUIDE',
-    icon: '💰',
-    img: 'assets/freelancing guiude.png',
-    badge: 'Newly Launched!',
-    title: 'Start Your Freelancing Career',
-    lang: 'In English', students: 'Newly Launched!',
-    price: '₹3499', ctaColor: '#27ae60', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','money'],
-    headerSup: 'TAKE CHARGE OF', headerName: 'YOUR MONEY',
-    icon: '📊',
-    img: 'assets/take charge of yor money.jpg',
-    badge: null,
-    title: 'Master Your Personal Finance',
-    lang: 'In English & Hindi', students: '120K+ Students',
-    price: '₹1999', ctaColor: '#2980b9', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','money'],
-    headerSup: 'THE COMPLETE GUIDE TO', headerName: 'STARTING UP',
-    icon: '🚀',
-    img: 'assets/starting up.jpg',
-    badge: null,
-    title: 'Launch Your Own Business',
-    lang: 'In English', students: '55K+ Students',
-    price: '₹1999', ctaColor: '#e74c3c', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','growth'],
-    headerSup: 'THE ART OF', headerName: 'COLD EMAILING',
-    icon: '📧',
-    img: 'assets/cold emails.jpg',
-    badge: null,
-    title: 'Write Emails That Get Replies',
-    lang: 'In English', students: '30K+ Students',
-    price: '₹999', ctaColor: '#16a085', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','growth'],
-    headerSup: 'MAKE WRITING', headerName: 'YOUR CAREER',
-    icon: '✍️',
-    img: 'assets/make writing your carrer.jpg',
-    badge: null,
-    title: 'Build a Career in Writing',
-    lang: 'In English', students: '22K+ Students',
-    price: '₹1499', ctaColor: '#8e44ad', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all','growth'],
-    headerSup: 'THE COMPLETE', headerName: 'CAREER TOOLKIT',
-    icon: '🧰',
-    img: 'assets/carrer tool kit.jpg',
-    badge: null,
-    title: 'Accelerate Your Career Growth',
-    lang: 'In English', students: '18K+ Students',
-    price: '₹1299', ctaColor: '#2c3e50', ctaTextColor: '#fff'
+    headerSup: 'VIP', headerName: 'COMPLETE FAMILY\nECOSYSTEM',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
+    img: 'assets/dr_abhishek_tiwari.png',
+    badge: 'Limited Slots',
+    title: 'The VIP Experience',
+    lang: 'Direct Access', students: '4 Personal Sessions',
+    price: '₹12999', ctaColor: '#f39c12', ctaTextColor: '#fff'
   }
 ];
 
+
+
 const whoFor = [
-  { icon: "🎓", title: "Students", desc: "Build skills before entering the job market." },
-  { icon: "💼", title: "Professionals", desc: "Level up your career with practical knowledge." },
-  { icon: "🚀", title: "Entrepreneurs", desc: "Turn your ideas into a real business." },
-  { icon: "✍️", title: "Creators", desc: "Grow your audience and monetize your content." },
-  { icon: "💡", title: "Curious Minds", desc: "Anyone who wants to learn and grow." },
-  { icon: "🏠", title: "Homemakers", desc: "Manage finances and build new skills." }
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 5 6.3"/><path d="M12 2.1a9 9 0 0 1 7 4.2"/><path d="M5 6.3a9 9 0 0 1 7-4.2"/></svg>`, title: "New Parents", desc: "First-time parents seeking guidance and confidence." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`, title: "Growing Families", desc: "Families looking for advanced parenting strategies." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>`, title: "Emergency Prep", desc: "Learn to handle common baby emergencies effectively." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>`, title: "Diet Planning", desc: "Expert guidance on nutrition for growing babies." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`, title: "Sleep Support", desc: "Solve baby sleep challenges for a restful home." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1 2.46-2.94H12"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0-2.46-2.94H12"/></svg>`, title: "Parent Coaches", desc: "Tools to become a better role model for your children." }
 ];
 
 const bentoSlides = [
   {
-    z1_stat: "957K",
-    z1_label: "Accounts Reached",
-    z1_quote: "I was most excited about high engagement-driven content and monetisation. They both were covered nicely in the curriculum. So happy!",
-    z1_name: "Rashmi Sheoran",
-    z1_course: "Enrolled in Instagram Mastery For Creators",
+    z1_stat: "25K+",
+    z1_label: "Families Mentored",
+    z1_quote: "Dr. Tiwari's approach to newborn care is a lifesaver. We were so overwhelmed, but his guidance made us feel confident as new parents.",
+    z1_name: "Sneha & Rahul",
+    z1_course: "Enrolled in Newborn Care Basics",
     z1_img: "assets/review1.png",
-    z2_target: 493112,
-    z3_quote: "Will make you question all that you've been doing till now.",
-    z3_author: "Riya Baria"
+    z2_target: 25480,
+    z3_quote: "The best advice for modern parents in a digital world.",
+    z3_author: "Priyanka S."
   },
   {
-    z1_stat: "275K",
-    z1_label: "Views in 3 months",
-    z1_quote: "This course taught me the science of making content. My stats have shown drastic improvement after implementing just half of their learnings.",
-    z1_name: "Ansh Mehra",
-    z1_course: "Enrolled in How To YouTube",
+    z1_stat: "15+",
+    z1_label: "Years of Expertise",
+    z1_quote: "His sessions on emotional well-being for parents changed how we look at our role. It's not just about the baby; it's about us too.",
+    z1_name: "Amit Mehra",
+    z1_course: "Enrolled in Premium Coaching",
     z1_img: "assets/review2.png",
-    z2_target: 504230,
-    z3_quote: "The best investment I've made for my career.",
-    z3_author: "Sneha K."
+    z2_target: 26120,
+    z3_quote: "Practical, medical-backed, and extremely compassionate.",
+    z3_author: "Anjali K."
   },
   {
-    z1_stat: "4.5X",
-    z1_label: "Revenue Growth",
-    z1_quote: "The freelancing guide gave me exact templates to pitch clients. I closed 3 international clients within the first month.",
-    z1_name: "Arjun T.",
-    z1_course: "Enrolled in The Ultimate Freelancing Guide",
+    z1_stat: "10K+",
+    z1_label: "Online Learners",
+    z1_quote: "The diet planning workshops are so practical. My baby is finally eating well without any fuss.",
+    z1_name: "Meera R.",
+    z1_course: "Enrolled in VIP Experience",
     z1_img: "assets/review3.png",
-    z2_target: 512900,
-    z3_quote: "Practical, no-fluff content. Exactly what I needed.",
+    z2_target: 27500,
+    z3_quote: "Highly recommended for every new parent.",
     z3_author: "Vikram P."
   },
   {
-    z1_stat: "1.2M",
-    z1_label: "Impressions",
-    z1_quote: "The frameworks provided in this course are gold. I finally understand the LinkedIn algorithm.",
-    z1_name: "Priya S.",
-    z1_course: "Enrolled in Learn to LinkedIn",
+    z1_stat: "98%",
+    z1_label: "Satisfaction Rate",
+    z1_quote: "Emergency prep gave me the peace of mind I needed. I know exactly what to do now.",
+    z1_name: "Sonia T.",
+    z1_course: "Enrolled in Emergency Prep",
     z1_img: "assets/review4.png",
-    z2_target: 518450,
-    z3_quote: "Changed my entire perspective on content creation.",
-    z3_author: "Meera R."
+    z2_target: 28200,
+    z3_quote: "A must-have for all families.",
+    z3_author: "Karan D."
   },
   {
-    z1_stat: "50+",
-    z1_label: "High Ticket Clients",
-    z1_quote: "I never thought writing could be this lucrative. The templates are literally copy-paste magic.",
+    z1_stat: "500+",
+    z1_label: "Live Sessions",
+    z1_quote: "The interactive sessions are the best part. No question goes unanswered.",
     z1_name: "Rahul M.",
-    z1_course: "Enrolled in Make Writing Your Career",
+    z1_course: "Enrolled in Premium Coaching",
     z1_img: "assets/review5.png",
-    z2_target: 524000,
-    z3_quote: "A must-have resource for anyone starting out.",
-    z3_author: "Karan D."
+    z2_target: 29100,
+    z3_quote: "Clear, concise, and professional.",
+    z3_author: "Riya B."
   }
 ];
 
 const faqs = [
-  { q: "What is the refund policy?", a: "We offer risk-free purchases across all courses. You can avail a full refund in 14 days of purchase, no questions asked. This is applicable across all courses and all plans.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>` },
-  { q: "Are the courses conducted live?", a: "No, all the courses are self-paced and come with lifetime access. You can go through the course at your own pace.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>` },
-  { q: "Do the courses have any live interaction?", a: "The premium plan of all the courses (except 'The Complete Guide To Starting Up' and 'The Art Of Cold Emailing') come with access to live group Q&A sessions with warikoo.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
-  { q: "Are there any criteria for joining the courses?", a: "Not at all! The courses are designed for anyone and everyone who want to learn.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>` },
-  { q: "Can I enroll in multiple courses?", a: "Yes, go for it! There are no limits on the number of courses that you can take up.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>` },
-  { q: "Is there a community that I can join?", a: "The premium plan for all courses includes access to a virtual chat-based community space where you can interact with other students, ask questions, and network.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
-  { q: "Whom do I contact in case of any issues or concerns?", a: "Feel free to reach out to our support team for any queries or technical assistance.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true, permanentOpen: true }
+  { q: "What is your refund policy?", a: "We believe in the value of our guidance. If you're not satisfied within 7 days of the first session, we offer a full refund, no questions asked.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>` },
+  { q: "Are sessions conducted online or offline?", a: "We offer both! Online sessions are available for global parents, while face-to-face consultations can be booked at our New Delhi clinic.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>` },
+  { q: "Do you provide emergency medical support?", a: "For emergencies, please visit the nearest hospital immediately. Our coaching focuses on education, preparation, and preventive care.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
+  { q: "Is this coaching suitable for parents of teenagers?", a: "Yes, while we specialize in early childhood, our 'Family Ecosystem' package covers strategies for emotional intelligence and communication that are vital for parenting teens.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>` },
+  { q: "How long are the personalized coaching sessions?", a: "Each personalized session lasts approximately 45–60 minutes, ensuring enough time to address your specific concerns in detail.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>` },
+  { q: "Can both parents attend the interactive sessions?", a: "Absolutely! We highly recommend both parents participate to ensure consistency in parenting approaches and shared learning.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>` },
+  { q: "Are the digital guides accessible forever?", a: "Yes, once you purchase any of our digital guides or the Newborn Care package, you get lifetime access to all included modules and future updates.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>` },
+  { q: "Whom do I contact for support?", a: "You can reach us via WhatsApp at +916290352731 or email us at care@doctorabhishektiwari.com.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true, permanentOpen: true }
 ];
 
 // ===== TYPING ANIMATION =====
-const typedWords = ["Careers", "Skills", "Finances", "Mindset", "Network", "Life"];
+const typedWords = ["Child Care", "Parenting", "Newborns", "Family Growth", "Health", "Confidence"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -399,7 +302,7 @@ let carouselOffset = 0;
 function buildCourseCard(c) {
   const lines = c.headerName.split('\n');
   const badge = c.badge
-    ? `<div class="card-badge">⚡ ${c.badge}</div>`
+    ? `<div class="card-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> ${c.badge}</div>`
     : '';
   return `
     <div class="course-card" data-tabs="${c.tabs.join(',')}">
@@ -416,8 +319,8 @@ function buildCourseCard(c) {
         <div class="card-hover-overlay">
           <div class="card-overlay-title">${c.title}</div>
           <div class="card-overlay-meta">
-            <span>🎤 ${c.lang}</span>
-            <span>🎓 ${c.students}</span>
+            <span><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> ${c.lang}</span>
+            <span><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> ${c.students}</span>
           </div>
         </div>
       </div>
@@ -582,7 +485,7 @@ function initBentoGrid() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          animateCounter(493112);
+          animateCounter(25000);
           observer.unobserve(entry.target);
         }
       });
@@ -726,15 +629,15 @@ function startThoughtAutoplay() {
 
 // ===== CREATORS MARQUEE =====
 const creatorsData = [
-  { text: "Most of what I do is a skill that I developed through practice, not education. So it was wonderful to contribute to a platform like WebVeda that truly values real-world skills.", name: "Raj Shamani", handle: "@rajshamani", img: "assets/review1.png" },
-  { text: "WebVeda is designed to set you up to win in your personal life and at work. These are all the skills you need to be a top performer and ace life. I can't recommend it enough!", name: "Niharikaa Kaur", handle: "@niharikaasodhi", img: "assets/review2.png" },
-  { text: "WebVeda will teach you what traditional education won't: how to look beyond the mainstream and build something meaningful for yourself.", name: "Anabelle Colaco", handle: "@anabellecolaco", img: "assets/review3.png" },
-  { text: "As a business owner, I know how important it is to be a master of many skills. WebVeda sets you up for exactly that - excellence across the many facets you need in your professional and personal life.", name: "Shreya Pattar", handle: "@shreyapattar", img: "assets/review4.png" },
-  { text: "I am a dancer, teacher, creator, and supporter of WebVeda! The courses on WebVeda have the potential to transform your life. All you have to do is take the first step.", name: "Radhika Warikoo", handle: "@a.dancers.tale", img: "assets/review5.png" },
-  { text: "Ankur teaches with clarity, honesty, and transparency. I am sure that their students will learn significantly, grow, and become excellent individuals.", name: "Neeraj Arora", handle: "@neerajaroraofficial", img: "assets/review1.png" },
-  { text: "A phenomenal platform that focuses on what truly matters in building a career.", name: "Vaibhav Sisinty", handle: "@vaibhavsisinty", img: "assets/review2.png" },
-  { text: "The practical knowledge shared here is unmatched. It's exactly what the current generation needs to navigate the modern work landscape.", name: "Manish Pandey", handle: "@join2manish", img: "assets/review3.png" },
-  { text: "It's rare to find education that actually maps to real-world scenarios. Highly recommend to everyone.", name: "Aman Dhattarwal", handle: "@amandhattarwal", img: "assets/review4.png" }
+  { text: "Dr. Tiwari's insights on pediatric health are invaluable. His guidance helped us navigate the early months of parenthood with ease and confidence.", name: "Rajesh S.", handle: "@parent_rajesh", img: "assets/review1.png" },
+  { text: "A truly passionate coach who understands the nuances of modern parenting. Highly recommended for all new parents!", name: "Nisha K.", handle: "@nisha_parenting", img: "assets/review2.png" },
+  { text: "The VIP package is a game-changer. Having direct access to Dr. Tiwari's expertise made a world of difference for our family.", name: "Vikram T.", handle: "@vikram_family", img: "assets/review3.png" },
+  { text: "Practical medical advice combined with modern parenting techniques. This is exactly what we needed.", name: "Sunil P.", handle: "@sunil_p", img: "assets/review4.png" },
+  { text: "The emergency first aid training is top-notch. Every parent should go through this.", name: "Kavita M.", handle: "@kavita_m", img: "assets/review5.png" },
+  { text: "Clear, concise, and professional. Dr. Tiwari is the best in the field.", name: "Arjun L.", handle: "@arjun_l", img: "assets/review1.png" },
+  { text: "We feel so much more confident as parents now. Thank you, Dr. Tiwari!", name: "Preeti V.", handle: "@preeti_v", img: "assets/review2.png" },
+  { text: "The sleep solutions actually work! Our baby is sleeping through the night.", name: "Manish H.", handle: "@manish_h", img: "assets/review3.png" },
+  { text: "A comprehensive ecosystem for family well-being. Worth every penny.", name: "Riya G.", handle: "@riya_g", img: "assets/review4.png" }
 ];
 
 function initCreatorsMarquee() {
