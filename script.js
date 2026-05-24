@@ -1,44 +1,59 @@
 // ===== COURSES DATA =====
 const courses = [
   {
-    tabs: ['all', 'guides'],
-    headerSup: 'ESSENTIAL', headerName: 'NEW PARENT\nGUIDE',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-5.34"/><path d="M18 7H9"/><path d="M18 11H9"/><path d="M18 15H9"/></svg>`,
+    tabs: ['all', 'parents'],
+    headerSup: 'BEGINNER', headerName: 'BASIC\nPREPARATION',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
     img: 'assets/newborn_care.png',
-    badge: 'Best Seller',
-    title: 'Newborn Care Basics',
-    lang: 'In Hindi & English', students: '25K+ Parents Mentored',
-    price: '₹199', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
+    badge: 'Beginner Program',
+    title: 'Basic Parenting Preparation',
+    lang: '45 Minutes Class', students: 'Expecting Parents',
+    price: '₹99', ctaColor: '#4F6BFF', ctaTextColor: '#fff',
+    features: ['Introduction', 'Pregnancy Emotional Prep', 'Financial & Physical Prep', 'Hospital Selection Basics', 'Basics of Newborn Care']
   },
   {
-    tabs: ['all', 'guides'],
-    headerSup: 'VITAL', headerName: 'NUTRITION\n& DIET',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 11 6A7 7 0 0 1 11 20Z"/><path d="M11 9A3 3 0 0 1 11 15A3 3 0 0 1 11 9Z"/><path d="M18 12h3"/><path d="M18 9l3-3"/><path d="M18 15l3 3"/></svg>`,
-    img: 'assets/review2.png',
-    badge: 'New',
-    title: 'Toddler Nutrition Guide',
-    lang: 'Video Series', students: 'Meal Plans Included',
-    price: '₹499', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
-  },
-  {
-    tabs: ['all', 'coaching'],
-    headerSup: 'PREMIUM', headerName: 'PERSONALIZED\nCOACHING',
+    tabs: ['all', 'parents'],
+    headerSup: 'PREMIUM', headerName: 'ADVANCED\nNEWBORN',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    img: 'assets/Doctor_talking_with_patient.jpeg',
-    badge: null,
-    title: 'Premium Parenting Pack',
-    lang: 'Interactive Sessions', students: 'Face-to-Face',
-    price: '₹2599', ctaColor: '#27ae60', ctaTextColor: '#fff'
+    img: 'assets/REVIEW-2.jpeg',
+    badge: 'Best Seller',
+    title: 'Advanced Newborn Parenting',
+    lang: '2 Hour Class', students: 'Deep Newborn Care',
+    price: '₹4999', ctaColor: '#27ae60', ctaTextColor: '#fff',
+    features: ['Advanced Newborn Care', 'Handling Family Interference', 'Milk & Sleep Hygiene', 'Baby Sleep Understanding', 'Formula Milk Guidance']
   },
   {
-    tabs: ['all', 'coaching'],
-    headerSup: 'VIP', headerName: 'COMPLETE FAMILY\nECOSYSTEM',
+    tabs: ['all', 'parents'],
+    headerSup: 'VIP', headerName: '1-ON-1\nMENTORSHIP',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
     img: 'assets/dr_abhishek_tiwari.png',
-    badge: 'Limited Slots',
-    title: 'The VIP Experience',
-    lang: 'Direct Access', students: '4 Personal Sessions',
-    price: '₹12999', ctaColor: '#f39c12', ctaTextColor: '#fff'
+    badge: 'Exclusive Mentorship',
+    title: 'VIP Parenting Mentorship',
+    lang: '4 Personal Sessions', students: 'Direct VIP Access',
+    price: '₹9999', ctaColor: '#f39c12', ctaTextColor: '#fff',
+    features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance']
+  },
+  {
+    tabs: ['all', 'specialized'],
+    headerSup: 'SPECIALIZED', headerName: 'BEHAVIOR\nMANAGEMENT',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
+    img: 'assets/REVIEW-4.jpeg',
+    badge: 'Parenting Skills',
+    title: 'Child Behavior Management',
+    lang: '100 Minutes Course', students: '10-Video Plan',
+    price: '₹1999', ctaColor: '#4F6BFF', ctaTextColor: '#fff',
+    features: ['Understanding Behaviors', 'Behavior Correction Methods', 'Positive Parenting Techniques', 'Detailed Video Guidelines']
+  },
+  {
+    tabs: ['all', 'specialized'],
+    headerSup: 'EMERGENCY', headerName: 'SAFETY\nPREPARATION',
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`,
+    img: 'assets/REVIEW-5.jpeg',
+    badge: 'Emergency Prep',
+    title: 'Emergencies At Home',
+    lang: '100 Minutes Class', students: 'First Aid Basics',
+    price: '₹1999', ctaColor: '#e74c3c', ctaTextColor: '#fff',
+    features: ['Common Home Emergencies', 'First Aid Basics', 'Home Emergency Handling', 'Emergency Workshop Videos']
   }
 ];
 
@@ -49,7 +64,7 @@ const whoFor = [
   { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`, title: "Growing Families", desc: "Families looking for advanced parenting strategies." },
   { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>`, title: "Emergency Prep", desc: "Learn to handle common baby emergencies effectively." },
   { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>`, title: "Diet Planning", desc: "Expert guidance on nutrition for growing babies." },
-  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`, title: "Sleep Support", desc: "Solve baby sleep challenges for a restful home." },
+  { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`, title: "Mental Health", desc: "Support for parental anxiety, postpartum depression, and emotional well-being." },
   { icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1 2.46-2.94H12"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0-2.46-2.94H12"/></svg>`, title: "Parent Coaches", desc: "Tools to become a better role model for your children." }
 ];
 
@@ -313,6 +328,17 @@ function buildCourseCard(c) {
   const badge = c.badge
     ? `<div class="card-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> ${c.badge}</div>`
     : '';
+  const featuresHtml = c.features
+    ? `<ul class="card-features-list">
+        ${c.features.map(f => `
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            ${f}
+          </li>
+        `).join('')}
+       </ul>`
+    : '';
+
   return `
     <div class="course-card" data-tabs="${c.tabs.join(',')}">
       <div class="card-header">
@@ -327,17 +353,20 @@ function buildCourseCard(c) {
         ${badge}
       </div>
       <div class="card-body">
-        <div class="card-title">${c.title}</div>
-        <div class="card-meta">
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>
-            ${c.lang}
-          </span>
-          <span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            ${c.students}
-          </span>
+        <div>
+          <div class="card-title">${c.title}</div>
+          <div class="card-meta">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>
+              ${c.lang}
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              ${c.students}
+            </span>
+          </div>
         </div>
+        ${featuresHtml}
       </div>
       <div class="card-cta" style="background:${c.ctaColor};color:${c.ctaTextColor}">
         Get Started &bull; ${c.price} &nbsp;→
@@ -354,25 +383,38 @@ function renderAllCards() {
 
 function applyFilter() {
   const carousel = document.getElementById('coursesCarousel');
+  const outer = document.querySelector('.courses-carousel-outer');
+  const consultationSection = document.getElementById('consultationSection');
   if (!carousel) return;
-  carousel.querySelectorAll('.course-card').forEach(card => {
-    const tabs = card.dataset.tabs.split(',');
-    card.classList.toggle('hidden', !tabs.includes(activeTab));
-  });
+
+  if (activeTab === 'consultation') {
+    if (outer) outer.style.display = 'none';
+    if (consultationSection) consultationSection.style.display = 'block';
+  } else {
+    if (outer) outer.style.display = 'block';
+    if (consultationSection) consultationSection.style.display = 'none';
+    carousel.querySelectorAll('.course-card').forEach(card => {
+      const tabs = card.dataset.tabs.split(',');
+      card.classList.toggle('hidden', !tabs.includes(activeTab));
+    });
+  }
   // Reset scroll
   carouselOffset = 0;
   carousel.style.transition = 'none';
   carousel.style.transform = 'translateX(0)';
-  updateArrows();
+  
+  // Use timeout to let browser layout pass run before calculating widths
+  setTimeout(updateArrows, 60);
 }
 
 function getVisibleCardWidth() {
   const carousel = document.getElementById('coursesCarousel');
-  if (!carousel) return 246;
+  if (!carousel) return 316;
   const card = carousel.querySelector('.course-card:not(.hidden)');
-  if (!card) return 246;
+  if (!card) return 316;
   // getBoundingClientRect gives the actual rendered width including vw-based sizes
-  return card.getBoundingClientRect().width + 16; // + gap
+  const w = card.getBoundingClientRect().width || 300;
+  return w + 16; // + gap
 }
 
 function getMaxOffset() {
@@ -384,8 +426,8 @@ function getMaxOffset() {
   const visibleCards = [...carousel.querySelectorAll('.course-card:not(.hidden)')];
   if (!visibleCards.length) return 0;
   const gap = 16;
-  const totalW = visibleCards.reduce((sum, c) => sum + c.offsetWidth + gap, 0) - gap;
-  const clipW = clip.offsetWidth;
+  const totalW = visibleCards.reduce((sum, c) => sum + (c.offsetWidth || 300) + gap, 0) - gap;
+  const clipW = clip.offsetWidth || clip.getBoundingClientRect().width || 944;
   return Math.max(0, totalW - clipW);
 }
 
