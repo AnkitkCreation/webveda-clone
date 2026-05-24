@@ -1127,12 +1127,14 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-.zone-1-image svg {
+.zone-1-image svg,
+.zone-1-image img {
   width: 100%;
   height: 100%;
   max-width: 220px;
   max-height: 220px;
   display: block;
+  object-fit: contain;
 }
 
 @media (max-width: 600px) {
@@ -1142,7 +1144,8 @@ body {
     bottom: 20px;
     right: -10px;
   }
-  .zone-1-image svg {
+  .zone-1-image svg,
+  .zone-1-image img {
     max-width: 150px;
     max-height: 150px;
   }
