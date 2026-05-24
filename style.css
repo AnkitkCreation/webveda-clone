@@ -1906,10 +1906,10 @@ body {
   /* Mobile section padding fixes */
   .why-wv { padding: 60px 16px; }
   .who-for { padding: 60px 16px; }
-  .bento-testimonials { padding: 60px 0; }
-  .creators-marquee { padding: 60px 0; }
-  .founder-section { padding: 60px 0; }
-  .faq { padding: 60px 0; }
+  .bento-testimonials { padding: 0; }
+  .creators-marquee { padding: 60px 16px; }
+  .founder-section { padding: 0; }
+  .faq { padding: 0; }
 
   /* Mobile FAQ padding fixes */
   .faq-question { padding: 16px; }

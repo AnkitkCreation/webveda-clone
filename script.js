@@ -137,7 +137,7 @@ const faqs = [
 ];
 
 // ===== TYPING ANIMATION =====
-const typedWords = ["Earn 1,000,000+", "Earn 10 Lacs+", ];
+const typedWords = ["1,000,000+"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -616,15 +616,21 @@ function animateCounter(target) {
 function renderAvatars() {
   const container = document.getElementById('z2-avatars');
   if (!container) return;
-  const avatarColors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22', '#1abc9c', '#34495e'];
+  const avatarImages = [
+    'assets/icon-1.png',
+    'assets/icon-2.png',
+    'assets/icon-3.png',
+    'assets/icon-4.png',
+    'assets/icon-5.png'
+  ];
   const numAvatars = 8;
   let html = '';
   for (let i = 0; i < numAvatars; i++) {
-    const size = 30 + Math.random() * 20;
+    const size = 35 + Math.random() * 15;
     const top = 10 + Math.random() * 80;
     const left = 5 + Math.random() * 90;
     const delay = Math.random() * 4;
-    const color = avatarColors.at(i % avatarColors.length);
+    const imgSrc = avatarImages[i % avatarImages.length];
 
     // Create an initial style with random positions but keep them away from the center text
     let adjustedLeft = left;
@@ -632,7 +638,7 @@ function renderAvatars() {
       adjustedLeft = left < 50 ? left - 30 : left + 30;
     }
 
-    html += '<div class="floating-avatar" style="width:' + size + 'px; height:' + size + 'px; top:' + top + '%; left:' + adjustedLeft + '%; background-color:' + color + '; animation-delay:-' + delay + 's; opacity: 1;" data-index="' + i + '"></div>';
+    html += '<img class="floating-avatar" src="' + imgSrc + '" style="width:' + size + 'px; height:' + size + 'px; top:' + top + '%; left:' + adjustedLeft + '%; background-color: #ffffff; padding: 6px; box-sizing: border-box; animation-delay:-' + delay + 's; opacity: 1;" data-index="' + i + '" alt="Icon" />';
   }
   container.innerHTML = html;
 }
