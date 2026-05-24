@@ -478,7 +478,7 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.92);
+  background: rgba(31, 29, 29, 0.92);
   border: none;
   cursor: pointer;
   display: flex;
@@ -489,7 +489,7 @@ body {
   transition: transform 0.2s ease, background 0.2s ease;
   padding-left: 4px;
 }
-.play-btn:hover { transform: scale(1.1); background: #fff; }
+.play-btn:hover { transform: scale(1.1); background: #131212ab; }
 .play-btn svg { display: block; }
 
 /* ---- Convex arc at bottom — white hill rising up ---- */
@@ -1636,6 +1636,10 @@ body {
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
+.faq-item.permanent .faq-answer {
+  max-height: none !important;
+  overflow: visible !important;
+}
 .faq-answer-inner {
   padding: 0 24px 24px;
   padding-left: 60px; /* Align with text */
@@ -1898,6 +1902,19 @@ body {
   .tab-btn { padding: 8px 16px; font-size: 0.9rem; }
   /* Hide arrows on mobile to maximize card visibility, users can swipe */
   .carousel-arrow { display: none; }
+
+  /* Mobile section padding fixes */
+  .why-wv { padding: 60px 16px; }
+  .who-for { padding: 60px 16px; }
+  .bento-testimonials { padding: 60px 0; }
+  .creators-marquee { padding: 60px 0; }
+  .founder-section { padding: 60px 0; }
+  .faq { padding: 60px 0; }
+
+  /* Mobile FAQ padding fixes */
+  .faq-question { padding: 16px; }
+  .faq-q-left { gap: 12px; }
+  .faq-answer-inner { padding: 0 16px 16px 48px; }
 }
 
 @media (max-width: 900px) {

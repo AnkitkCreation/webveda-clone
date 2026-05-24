@@ -4,7 +4,7 @@ const courses = [
     tabs: ['all', 'parents'],
     headerSup: 'BEGINNER', headerName: 'BASIC\nPREPARATION',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
-    img: 'assets/newborn_care.png',
+    img: 'assets/basic_newborn_care.jpeg',
     badge: 'Beginner Program',
     title: 'Basic Parenting Preparation',
     lang: '45 Minutes Class', students: 'Expecting Parents',
@@ -15,7 +15,7 @@ const courses = [
     tabs: ['all', 'parents'],
     headerSup: 'PREMIUM', headerName: 'ADVANCED\nNEWBORN',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    img: 'assets/REVIEW-2.jpeg',
+    img: 'assets/advanced_newborn_care.jpeg',
     badge: 'Best Seller',
     title: 'Advanced Newborn Parenting',
     lang: '2 Hour Class', students: 'Deep Newborn Care',
@@ -26,7 +26,7 @@ const courses = [
     tabs: ['all', 'parents'],
     headerSup: 'VIP', headerName: '1-ON-1\nMENTORSHIP',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
-    img: 'assets/dr_abhishek_tiwari.png',
+    img: 'assets/consultation_dr_abhishek_tiwari.jpeg',
     badge: 'Exclusive Mentorship',
     title: 'VIP Parenting Mentorship',
     lang: '4 Personal Sessions', students: 'Direct VIP Access',
@@ -37,7 +37,7 @@ const courses = [
     tabs: ['all', 'specialized'],
     headerSup: 'SPECIALIZED', headerName: 'BEHAVIOR\nMANAGEMENT',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
-    img: 'assets/REVIEW-4.jpeg',
+    img: 'assets/behavior_management.jpeg',
     badge: 'Parenting Skills',
     title: 'Child Behavior Management',
     lang: '100 Minutes Course', students: '10-Video Plan',
@@ -48,7 +48,7 @@ const courses = [
     tabs: ['all', 'specialized'],
     headerSup: 'EMERGENCY', headerName: 'SAFETY\nPREPARATION',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`,
-    img: 'assets/REVIEW-5.jpeg',
+    img: 'assets/emergency_prep.jpeg',
     badge: 'Emergency Prep',
     title: 'Emergencies At Home',
     lang: '100 Minutes Class', students: 'First Aid Basics',
@@ -137,7 +137,7 @@ const faqs = [
 ];
 
 // ===== TYPING ANIMATION =====
-const typedWords = ["Child Care", "Parenting", "Newborns", "Family Growth", "Health", "Confidence"];
+const typedWords = ["Earn 1,000,000+", "Earn 10 Lacs+", ];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
