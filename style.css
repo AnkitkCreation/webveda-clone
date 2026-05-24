@@ -1660,11 +1660,11 @@ body {
   text-decoration: none;
   opacity: 0.8;
 }
-.faq-wa-btn {
+.faq-answer .faq-wa-btn {
   display: inline-flex;
   align-items: center;
   background: #4f6ef7;
-  color: #fff;
+  color: #ffffff;
   padding: 10px 24px;
   border-radius: 50px;
   font-weight: 600;
@@ -1673,7 +1673,7 @@ body {
   font-size: 0.9rem;
   transition: background var(--transition);
 }
-.faq-wa-btn:hover {
+.faq-answer .faq-wa-btn:hover {
   background: #3a5ce5;
 }
 
