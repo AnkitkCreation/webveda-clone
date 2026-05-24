@@ -1,7 +1,7 @@
 // ===== COURSES DATA =====
 const courses = [
   {
-    tabs: ['all','guides'],
+    tabs: ['all', 'guides'],
     headerSup: 'ESSENTIAL', headerName: 'NEW PARENT\nGUIDE',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-5.34"/><path d="M18 7H9"/><path d="M18 11H9"/><path d="M18 15H9"/></svg>`,
     img: 'assets/newborn_care.png',
@@ -11,7 +11,7 @@ const courses = [
     price: '₹199', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
   },
   {
-    tabs: ['all','guides'],
+    tabs: ['all', 'guides'],
     headerSup: 'VITAL', headerName: 'NUTRITION\n& DIET',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 11 6A7 7 0 0 1 11 20Z"/><path d="M11 9A3 3 0 0 1 11 15A3 3 0 0 1 11 9Z"/><path d="M18 12h3"/><path d="M18 9l3-3"/><path d="M18 15l3 3"/></svg>`,
     img: 'assets/review2.png',
@@ -21,7 +21,7 @@ const courses = [
     price: '₹499', ctaColor: '#4F6BFF', ctaTextColor: '#fff'
   },
   {
-    tabs: ['all','coaching'],
+    tabs: ['all', 'coaching'],
     headerSup: 'PREMIUM', headerName: 'PERSONALIZED\nCOACHING',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
     img: 'assets/Doctor_talking_with_patient.jpeg',
@@ -31,7 +31,7 @@ const courses = [
     price: '₹2599', ctaColor: '#27ae60', ctaTextColor: '#fff'
   },
   {
-    tabs: ['all','coaching'],
+    tabs: ['all', 'coaching'],
     headerSup: 'VIP', headerName: 'COMPLETE FAMILY\nECOSYSTEM',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
     img: 'assets/dr_abhishek_tiwari.png',
@@ -112,14 +112,13 @@ const bentoSlides = [
 ];
 
 const faqs = [
-  { q: "What is your refund policy?", a: "We believe in the value of our guidance. If you're not satisfied within 7 days of the first session, we offer a full refund, no questions asked.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>` },
-  { q: "Are sessions conducted online or offline?", a: "We offer both! Online sessions are available for global parents, while face-to-face consultations can be booked at our New Delhi clinic.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>` },
+  { q: "Are sessions conducted online or offline?", a: "We offer both! Online sessions are available for global parents, while face-to-face consultations can be booked at our Kolkata clinic.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>` },
   { q: "Do you provide emergency medical support?", a: "For emergencies, please visit the nearest hospital immediately. Our coaching focuses on education, preparation, and preventive care.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>` },
   { q: "Is this coaching suitable for parents of teenagers?", a: "Yes, while we specialize in early childhood, our 'Family Ecosystem' package covers strategies for emotional intelligence and communication that are vital for parenting teens.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>` },
-  { q: "How long are the personalized coaching sessions?", a: "Each personalized session lasts approximately 45–60 minutes, ensuring enough time to address your specific concerns in detail.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>` },
+  { q: "How long are the personalized coaching sessions?", a: "Each personalized session lasts approximately 60 minutes, ensuring enough time to address your specific concerns in detail.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>` },
   { q: "Can both parents attend the interactive sessions?", a: "Absolutely! We highly recommend both parents participate to ensure consistency in parenting approaches and shared learning.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>` },
   { q: "Are the digital guides accessible forever?", a: "Yes, once you purchase any of our digital guides or the Newborn Care package, you get lifetime access to all included modules and future updates.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>` },
-  { q: "Whom do I contact for support?", a: "You can reach us via WhatsApp at +916290352731 or email us at care@doctorabhishektiwari.com.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true, permanentOpen: true }
+  { q: "Whom do I contact for support?", a: "You can reach us via WhatsApp at <a href=\"http://wa.me/+916290352731\" target=\"_blank\">+916290352731</a> or email us at <a href=\"mailto:care@doctorabhishektiwari.com\">care@doctorabhishektiwari.com</a>.", icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`, hasBtn: true, permanentOpen: true }
 ];
 
 // ===== TYPING ANIMATION =====
@@ -173,14 +172,14 @@ function buildRoundedRectPath(W, H, r, pad) {
     cr,
     perimeter: 2 * straightW + 2 * straightH + 4 * arcLen,
     segments: [
-      { len: straightW,  type: 'line', x0: x + cr,     y0: y,         dx:  1, dy:  0 },
-      { len: arcLen,     type: 'arc',  cx: x + w - cr, cy: y + cr,     startA: -Math.PI / 2, dir: 1 },
-      { len: straightH,  type: 'line', x0: x + w,      y0: y + cr,     dx:  0, dy:  1 },
-      { len: arcLen,     type: 'arc',  cx: x + w - cr, cy: y + h - cr, startA: 0,            dir: 1 },
-      { len: straightW,  type: 'line', x0: x + w - cr, y0: y + h,      dx: -1, dy:  0 },
-      { len: arcLen,     type: 'arc',  cx: x + cr,     cy: y + h - cr, startA: Math.PI / 2,  dir: 1 },
-      { len: straightH,  type: 'line', x0: x,          y0: y + h - cr, dx:  0, dy: -1 },
-      { len: arcLen,     type: 'arc',  cx: x + cr,     cy: y + cr,     startA: Math.PI,      dir: 1 },
+      { len: straightW, type: 'line', x0: x + cr, y0: y, dx: 1, dy: 0 },
+      { len: arcLen, type: 'arc', cx: x + w - cr, cy: y + cr, startA: -Math.PI / 2, dir: 1 },
+      { len: straightH, type: 'line', x0: x + w, y0: y + cr, dx: 0, dy: 1 },
+      { len: arcLen, type: 'arc', cx: x + w - cr, cy: y + h - cr, startA: 0, dir: 1 },
+      { len: straightW, type: 'line', x0: x + w - cr, y0: y + h, dx: -1, dy: 0 },
+      { len: arcLen, type: 'arc', cx: x + cr, cy: y + h - cr, startA: Math.PI / 2, dir: 1 },
+      { len: straightH, type: 'line', x0: x, y0: y + h - cr, dx: 0, dy: -1 },
+      { len: arcLen, type: 'arc', cx: x + cr, cy: y + cr, startA: Math.PI, dir: 1 },
     ]
   };
 }
@@ -242,9 +241,9 @@ function createCometOrbit(el, color = '#7baeff', speed = 0.22, tailLength = 0.18
     const P = path.perimeter;
     if (P <= 0) { raf = requestAnimationFrame(draw); return; }
 
-    const headDist  = progress * P;
-    const tailDist  = tailLength * P;
-    const STEPS     = 80; // points along the tail
+    const headDist = progress * P;
+    const tailDist = tailLength * P;
+    const STEPS = 80; // points along the tail
 
     // Draw tail as a series of line segments with fading opacity
     for (let i = 0; i < STEPS - 1; i++) {
@@ -274,9 +273,9 @@ function createCometOrbit(el, color = '#7baeff', speed = 0.22, tailLength = 0.18
 
     // Outer glow
     const grd = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, 10);
-    grd.addColorStop(0,   hexToRgba(color, 0.9));
+    grd.addColorStop(0, hexToRgba(color, 0.9));
     grd.addColorStop(0.4, hexToRgba(color, 0.35));
-    grd.addColorStop(1,   hexToRgba(color, 0));
+    grd.addColorStop(1, hexToRgba(color, 0));
     ctx.beginPath();
     ctx.arc(head.x, head.y, 10, 0, Math.PI * 2);
     ctx.fillStyle = grd;
@@ -502,7 +501,7 @@ function initBentoGrid() {
 
 function updateBentoSlide(index) {
   const slide = bentoSlides[index];
-  
+
   // Wrap all zones to trigger enter animation
   const fadeEls = document.querySelectorAll('.fade-el-z1');
   fadeEls.forEach(el => {
@@ -529,7 +528,7 @@ function updateBentoSlide(index) {
 
 function updateThoughtSlide(index) {
   const slide = bentoSlides[index];
-  
+
   const fadeEls = document.querySelectorAll('.fade-el-z3');
   fadeEls.forEach(el => {
     el.classList.add('fade-out');
@@ -573,17 +572,17 @@ function renderAvatars() {
   const avatarColors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f', '#9b59b6', '#e67e22', '#1abc9c', '#34495e'];
   const numAvatars = 8;
   let html = '';
-  for(let i=0; i<numAvatars; i++) {
+  for (let i = 0; i < numAvatars; i++) {
     const size = 30 + Math.random() * 20;
     const top = 10 + Math.random() * 80;
     const left = 5 + Math.random() * 90;
     const delay = Math.random() * 4;
     const color = avatarColors[i % avatarColors.length];
-    
+
     // Create an initial style with random positions but keep them away from the center text
     let adjustedLeft = left;
     if (adjustedLeft > 35 && adjustedLeft < 65 && top > 35 && top < 65) {
-        adjustedLeft = left < 50 ? left - 30 : left + 30;
+      adjustedLeft = left < 50 ? left - 30 : left + 30;
     }
 
     html += `<div class="floating-avatar" style="width:${size}px; height:${size}px; top:${top}%; left:${adjustedLeft}%; background-color:${color}; animation-delay:-${delay}s; opacity: 1;" data-index="${i}"></div>`;
@@ -602,7 +601,7 @@ function shuffleAvatars() {
         const left = 5 + Math.random() * 90;
         let adjustedLeft = left;
         if (adjustedLeft > 35 && adjustedLeft < 65 && top > 35 && top < 65) {
-            adjustedLeft = left < 50 ? left - 30 : left + 30;
+          adjustedLeft = left < 50 ? left - 30 : left + 30;
         }
         avatar.style.top = top + '%';
         avatar.style.left = adjustedLeft + '%';
@@ -703,7 +702,7 @@ function renderFAQ() {
       <div class="faq-answer" id="faq-answer-${i}">
         <div class="faq-answer-inner">
           <p>${f.a}</p>
-          ${f.hasBtn ? `<a href="#" class="faq-wa-btn">Need Support? WhatsApp Us</a>` : ''}
+          ${f.hasBtn ? `<a href="http://wa.me/+916290352731" target="_blank" class="faq-wa-btn">Need Support? WhatsApp Us</a>` : ''}
         </div>
       </div>
     </div>
@@ -726,14 +725,14 @@ function toggleFAQ(index) {
 
   const answer = document.getElementById(`faq-answer-${index}`);
   const isOpen = item.classList.contains('open');
-  
+
   document.querySelectorAll('.faq-item').forEach(el => {
     if (!el.classList.contains('permanent')) {
       el.classList.remove('open');
       el.querySelector('.faq-answer').style.maxHeight = null;
     }
   });
-  
+
   if (!isOpen) {
     item.classList.add('open');
     answer.style.maxHeight = answer.scrollHeight + 'px';
