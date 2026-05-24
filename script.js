@@ -60,7 +60,7 @@ const bentoSlides = [
     z1_quote: "Dr. Tiwari's approach to newborn care is a lifesaver. We were so overwhelmed, but his guidance made us feel confident as new parents.",
     z1_name: "Sneha & Rahul",
     z1_course: "Enrolled in Newborn Care Basics",
-    z1_img: "assets/review1.png",
+    z1_svg: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="glow4"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#glow4)" stroke="#6CA4FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="75" cy="85" r="18"/><circle cx="145" cy="85" r="18"/><circle cx="110" cy="60" r="20"/><path d="M45 155C45 130 60 118 75 118C90 118 105 130 105 155"/><path d="M115 155C115 130 130 118 145 118C160 118 175 130 175 155"/><path d="M70 160C70 125 90 108 110 108C130 108 150 125 150 160"/></g></svg>`,
     z2_target: 25480,
     z3_quote: "The best advice for modern parents in a digital world.",
     z3_author: "Priyanka S."
@@ -71,7 +71,7 @@ const bentoSlides = [
     z1_quote: "His sessions on emotional well-being for parents changed how we look at our role. It's not just about the baby; it's about us too.",
     z1_name: "Amit Mehra",
     z1_course: "Enrolled in Premium Coaching",
-    z1_img: "assets/review2.png",
+    z1_svg: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="glow3"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#glow3)" stroke="#5A8DFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="110" cy="110" r="70"/><path d="M110 70V110L140 130"/><circle cx="110" cy="110" r="8" fill="#5A8DFF"/><path d="M70 45L55 30"/><path d="M150 45L165 30"/><path d="M110 20V40"/></g></svg>`,
     z2_target: 26120,
     z3_quote: "Practical, medical-backed, and extremely compassionate.",
     z3_author: "Anjali K."
@@ -82,7 +82,7 @@ const bentoSlides = [
     z1_quote: "The diet planning workshops are so practical. My baby is finally eating well without any fuss.",
     z1_name: "Meera R.",
     z1_course: "Enrolled in VIP Experience",
-    z1_img: "assets/review3.png",
+    z1_svg: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="glow2"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#glow2)" stroke="#5B8CFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="45" y="45" width="130" height="90" rx="12"/><path d="M80 165H140"/><path d="M110 135V165"/><circle cx="90" cy="85" r="12"/><path d="M70 115C75 100 85 95 90 95C95 95 105 100 110 115"/><circle cx="135" cy="88" r="10"/><path d="M120 115C125 103 132 100 135 100C138 100 145 103 150 115"/></g></svg>`,
     z2_target: 27500,
     z3_quote: "Highly recommended for every new parent.",
     z3_author: "Vikram P."
@@ -93,7 +93,7 @@ const bentoSlides = [
     z1_quote: "Emergency prep gave me the peace of mind I needed. I know exactly what to do now.",
     z1_name: "Sonia T.",
     z1_course: "Enrolled in Emergency Prep",
-    z1_img: "assets/review4.png",
+    z1_svg: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="glow1"><feGaussianBlur stdDeviation="4" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#glow1)" stroke="#7CB8FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path d="M110 20L180 50V100C180 145 150 178 110 195C70 178 40 145 40 100V50L110 20Z"/><path d="M110 75C95 55 60 65 60 100C60 130 110 160 110 160C110 160 160 130 160 100C160 65 125 55 110 75Z"/><path d="M55 140C70 120 95 118 110 135C125 118 150 120 165 140"/></g></svg>`,
     z2_target: 28200,
     z3_quote: "A must-have for all families.",
     z3_author: "Karan D."
@@ -104,7 +104,7 @@ const bentoSlides = [
     z1_quote: "The interactive sessions are the best part. No question goes unanswered.",
     z1_name: "Rahul M.",
     z1_course: "Enrolled in Premium Coaching",
-    z1_img: "assets/review5.png",
+    z1_svg: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><filter id="glow5"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g filter="url(#glow5)" stroke="#6694FF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><rect x="35" y="45" width="150" height="100" rx="14"/><path d="M85 145L70 175H150L135 145"/><path d="M100 85L135 105L100 125V85Z" fill="#6694FF"/><circle cx="170" cy="60" r="10"/></g></svg>`,
     z2_target: 29100,
     z3_quote: "Clear, concise, and professional.",
     z3_author: "Riya B."
@@ -515,7 +515,7 @@ function updateBentoSlide(index) {
     document.getElementById('z1-quote').textContent = '"' + slide.z1_quote + '"';
     document.getElementById('z1-name').textContent = slide.z1_name;
     document.getElementById('z1-course').textContent = slide.z1_course;
-    document.getElementById('z1-image').src = slide.z1_img;
+    document.getElementById('z1-image-container').innerHTML = slide.z1_svg;
 
     // Trigger enter active
     fadeEls.forEach(el => {
@@ -631,15 +631,15 @@ function startThoughtAutoplay() {
 
 // ===== CREATORS MARQUEE =====
 const creatorsData = [
-  { text: "Dr. Tiwari's insights on pediatric health are invaluable. His guidance helped us navigate the early months of parenthood with ease and confidence.", name: "Rajesh S.", handle: "@parent_rajesh", img: "assets/review1.png" },
-  { text: "A truly passionate coach who understands the nuances of modern parenting. Highly recommended for all new parents!", name: "Nisha K.", handle: "@nisha_parenting", img: "assets/review2.png" },
-  { text: "The VIP package is a game-changer. Having direct access to Dr. Tiwari's expertise made a world of difference for our family.", name: "Vikram T.", handle: "@vikram_family", img: "assets/review3.png" },
-  { text: "Practical medical advice combined with modern parenting techniques. This is exactly what we needed.", name: "Sunil P.", handle: "@sunil_p", img: "assets/review4.png" },
-  { text: "The emergency first aid training is top-notch. Every parent should go through this.", name: "Kavita M.", handle: "@kavita_m", img: "assets/review5.png" },
-  { text: "Clear, concise, and professional. Dr. Tiwari is the best in the field.", name: "Arjun L.", handle: "@arjun_l", img: "assets/review1.png" },
-  { text: "We feel so much more confident as parents now. Thank you, Dr. Tiwari!", name: "Preeti V.", handle: "@preeti_v", img: "assets/review2.png" },
-  { text: "The sleep solutions actually work! Our baby is sleeping through the night.", name: "Manish H.", handle: "@manish_h", img: "assets/review3.png" },
-  { text: "A comprehensive ecosystem for family well-being. Worth every penny.", name: "Riya G.", handle: "@riya_g", img: "assets/review4.png" }
+  { text: "Dr. Tiwari's insights on pediatric health are invaluable. His guidance helped us navigate the early months of parenthood with ease and confidence.", name: "Rajesh S.", handle: "@parent_rajesh", img: "assets/REVIEW-1.jpeg" },
+  { text: "A truly passionate coach who understands the nuances of modern parenting. Highly recommended for all new parents!", name: "Nisha K.", handle: "@nisha_parenting", img: "assets/REVIEW-2.jpeg" },
+  { text: "The VIP package is a game-changer. Having direct access to Dr. Tiwari's expertise made a world of difference for our family.", name: "Vikram T.", handle: "@vikram_family", img: "assets/REVIEW-3.jpeg" },
+  { text: "Practical medical advice combined with modern parenting techniques. This is exactly what we needed.", name: "Sunil P.", handle: "@sunil_p", img: "assets/REVIEW-4.jpeg" },
+  { text: "The emergency first aid training is top-notch. Every parent should go through this.", name: "Kavita M.", handle: "@kavita_m", img: "assets/REVIEW-5.jpeg" },
+  { text: "Clear, concise, and professional. Dr. Tiwari is the best in the field.", name: "Arjun L.", handle: "@arjun_l", img: "assets/REVIEW-6.jpeg" },
+  { text: "We feel so much more confident as parents now. Thank you, Dr. Tiwari!", name: "Preeti V.", handle: "@preeti_v", img: "assets/REVIEW-7.jpeg" },
+  { text: "The sleep solutions actually work! Our baby is sleeping through the night.", name: "Manish H.", handle: "@manish_h", img: "assets/REVIEW-8.jpeg" },
+  { text: "A comprehensive ecosystem for family well-being. Worth every penny.", name: "Riya G.", handle: "@riya_g", img: "assets/REVIEW-9.jpeg" }
 ];
 
 function initCreatorsMarquee() {

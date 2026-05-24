@@ -1051,11 +1051,32 @@ body {
   bottom: 24px; /* to sit above the blue bar */
   right: -20px;
   width: 280px;
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
   z-index: 1;
+}
+.zone-1-image svg {
+  width: 100%;
+  height: 100%;
+  max-width: 220px;
+  max-height: 220px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .zone-1-image {
+    width: 180px;
+    height: 180px;
+    bottom: 20px;
+    right: -10px;
+  }
+  .zone-1-image svg {
+    max-width: 150px;
+    max-height: 150px;
+  }
 }
 
 .bento-nav {
@@ -1304,12 +1325,14 @@ body {
 .founder-video-container {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 520px;
   margin: 0 auto;
   aspect-ratio: 1; /* roughly square for the blob */
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 32px;
+  overflow: hidden;
 }
 
 .founder-blob-bg {
@@ -1319,14 +1342,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: #4A72FF;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  border-radius: 32px;
   z-index: 1;
-  animation: blob-morph 8s ease-in-out infinite alternate;
-}
-
-@keyframes blob-morph {
-  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
-  100% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; }
 }
 
 .founder-video {
@@ -1338,8 +1355,22 @@ body {
   /* If the video has a white background, it will hide the blob. 
      If it is transparent, the blob will show. 
      In case the video is opaque and we want the blob shape ON the video: */
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  animation: blob-morph 8s ease-in-out infinite alternate;
+  border-radius: 32px;
+}
+
+.founder-video-overlay-text {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  color: #ffffff;
+  font-family: 'Playfair Display', cursive;
+  font-size: 2.8rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  letter-spacing: 1.5px;
 }
 
 @media (max-width: 900px) {
