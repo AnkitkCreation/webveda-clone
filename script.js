@@ -86,7 +86,7 @@ const bentoSlides = [
     z1_quote: "His sessions on emotional well-being for parents changed how we look at our role. It's not just about the baby; it's about us too.",
     z1_name: "Amit Mehra",
     z1_course: "Enrolled in Premium Coaching",
-    z1_svg: `<img src="assets/icon-2.png" alt="Years of Expertise" />`,
+    z1_svg: `<img src="assets/icon-4.png" alt="Years of Expertise" />`,
     z2_target: 26120,
     z3_quote: "Practical, medical-backed, and extremely compassionate.",
     z3_author: "Anjali K."
@@ -97,7 +97,7 @@ const bentoSlides = [
     z1_quote: "The diet planning workshops are so practical. My baby is finally eating well without any fuss.",
     z1_name: "Meera R.",
     z1_course: "Enrolled in VIP Experience",
-    z1_svg: `<img src="assets/icon-3.png" alt="Online Learners" />`,
+    z1_svg: `<img src="assets/icon-5.png" alt="Online Learners" />`,
     z2_target: 27500,
     z3_quote: "Highly recommended for every new parent.",
     z3_author: "Vikram P."
@@ -108,7 +108,7 @@ const bentoSlides = [
     z1_quote: "Emergency prep gave me the peace of mind I needed. I know exactly what to do now.",
     z1_name: "Sonia T.",
     z1_course: "Enrolled in Emergency Prep",
-    z1_svg: `<img src="assets/icon-4.png" alt="Satisfaction Rate" />`,
+    z1_svg: `<img src="assets/icon-3.png" alt="Satisfaction Rate" />`,
     z2_target: 28200,
     z3_quote: "A must-have for all families.",
     z3_author: "Karan D."
@@ -119,7 +119,7 @@ const bentoSlides = [
     z1_quote: "The interactive sessions are the best part. No question goes unanswered.",
     z1_name: "Rahul M.",
     z1_course: "Enrolled in Premium Coaching",
-    z1_svg: `<img src="assets/icon-5.png" alt="Live Sessions" />`,
+    z1_svg: `<img src="assets/icon-2.png" alt="Live Sessions" />`,
     z2_target: 29100,
     z3_quote: "Clear, concise, and professional.",
     z3_author: "Riya B."
@@ -168,155 +168,6 @@ function typeLoop() {
   }
 
   setTimeout(typeLoop, delay);
-}
-
-// ===== GLOWING COMET LINE ORBIT =====
-// Draws a thin bright line (comet head) that traces the border path
-// with a fading tail behind it — like a glowing streak orbiting the element.
-
-function buildRoundedRectPath(W, H, r, pad) {
-  const x = pad, y = pad;
-  const w = W - pad * 2, h = H - pad * 2;
-  const cr = Math.max(0, r - pad);
-  const straightW = Math.max(0, w - cr * 2);
-  const straightH = Math.max(0, h - cr * 2);
-  const arcLen = Math.PI * 0.5 * cr; // one corner arc length
-
-  // Segments going clockwise from top-left corner end
-  return {
-    cr,
-    perimeter: 2 * straightW + 2 * straightH + 4 * arcLen,
-    segments: [
-      { len: straightW, type: 'line', x0: x + cr, y0: y, dx: 1, dy: 0 },
-      { len: arcLen, type: 'arc', cx: x + w - cr, cy: y + cr, startA: -Math.PI / 2, dir: 1 },
-      { len: straightH, type: 'line', x0: x + w, y0: y + cr, dx: 0, dy: 1 },
-      { len: arcLen, type: 'arc', cx: x + w - cr, cy: y + h - cr, startA: 0, dir: 1 },
-      { len: straightW, type: 'line', x0: x + w - cr, y0: y + h, dx: -1, dy: 0 },
-      { len: arcLen, type: 'arc', cx: x + cr, cy: y + h - cr, startA: Math.PI / 2, dir: 1 },
-      { len: straightH, type: 'line', x0: x, y0: y + h - cr, dx: 0, dy: -1 },
-      { len: arcLen, type: 'arc', cx: x + cr, cy: y + cr, startA: Math.PI, dir: 1 },
-    ]
-  };
-}
-
-function getPointOnPath(path, dist) {
-  let remaining = ((dist % path.perimeter) + path.perimeter) % path.perimeter;
-  for (const seg of path.segments) {
-    if (remaining <= seg.len + 0.001) {
-      const t = seg.len > 0 ? Math.min(remaining / seg.len, 1) : 0;
-      if (seg.type === 'line') {
-        return { x: seg.x0 + seg.dx * remaining, y: seg.y0 + seg.dy * remaining };
-      } else {
-        const a = seg.startA + t * (Math.PI / 2) * seg.dir;
-        return { x: seg.cx + Math.cos(a) * path.cr, y: seg.cy + Math.sin(a) * path.cr };
-      }
-    }
-    remaining -= seg.len;
-  }
-  return { x: 0, y: 0 };
-}
-
-function createCometOrbit(el, color = '#7baeff', speed = 0.22, tailLength = 0.18, pad = 6) {
-  // speed = fraction of perimeter per second
-  // tailLength = fraction of perimeter the tail covers
-  const canvas = document.createElement('canvas');
-  canvas.style.cssText = `
-    position:absolute; inset:-${pad}px;
-    width:calc(100% + ${pad * 2}px); height:calc(100% + ${pad * 2}px);
-    pointer-events:none; z-index:10; border-radius:inherit;
-  `;
-  el.style.position = 'relative';
-  el.appendChild(canvas);
-
-  let progress = 0; // 0..1 fraction of perimeter
-  let last = null;
-  let raf;
-
-  function draw(ts) {
-    if (last !== null) {
-      const dt = Math.min(ts - last, 50); // cap at 50ms
-      progress = (progress + speed * dt * 0.001) % 1;
-    }
-    last = ts;
-
-    const W = canvas.offsetWidth;
-    const H = canvas.offsetHeight;
-    if (!W || !H) { raf = requestAnimationFrame(draw); return; }
-    if (canvas.width !== W || canvas.height !== H) {
-      canvas.width = W; canvas.height = H;
-    }
-
-    const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, W, H);
-
-    const style = getComputedStyle(el);
-    const rawR = parseFloat(style.borderRadius) || 0;
-    const r = Math.min(rawR, el.offsetWidth / 2, el.offsetHeight / 2);
-    const path = buildRoundedRectPath(W, H, r, pad);
-    const P = path.perimeter;
-    if (P <= 0) { raf = requestAnimationFrame(draw); return; }
-
-    const headDist = progress * P;
-    const tailDist = tailLength * P;
-    const STEPS = 80; // points along the tail
-
-    // Draw tail as a series of line segments with fading opacity
-    for (let i = 0; i < STEPS - 1; i++) {
-      const t0 = i / STEPS;
-      const t1 = (i + 1) / STEPS;
-      const d0 = headDist - tailDist * (1 - t0);
-      const d1 = headDist - tailDist * (1 - t1);
-      const p0 = getPointOnPath(path, d0);
-      const p1 = getPointOnPath(path, d1);
-
-      // Opacity: 0 at tail end → 1 near head
-      const alpha = Math.pow(t1, 1.8) * 0.85;
-      // Line width: 0.5px at tail → 1.5px at head
-      const lw = 0.5 + t1 * 1.0;
-
-      ctx.beginPath();
-      ctx.moveTo(p0.x, p0.y);
-      ctx.lineTo(p1.x, p1.y);
-      ctx.strokeStyle = hexToRgba(color, alpha);
-      ctx.lineWidth = lw;
-      ctx.lineCap = 'round';
-      ctx.stroke();
-    }
-
-    // Draw glowing head
-    const head = getPointOnPath(path, headDist);
-
-    // Outer glow
-    const grd = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, 10);
-    grd.addColorStop(0, hexToRgba(color, 0.9));
-    grd.addColorStop(0.4, hexToRgba(color, 0.35));
-    grd.addColorStop(1, hexToRgba(color, 0));
-    ctx.beginPath();
-    ctx.arc(head.x, head.y, 10, 0, Math.PI * 2);
-    ctx.fillStyle = grd;
-    ctx.fill();
-
-    // Bright core dot
-    ctx.beginPath();
-    ctx.arc(head.x, head.y, 2, 0, Math.PI * 2);
-    ctx.fillStyle = '#ffffff';
-    ctx.shadowColor = color;
-    ctx.shadowBlur = 8;
-    ctx.fill();
-    ctx.shadowBlur = 0;
-
-    raf = requestAnimationFrame(draw);
-  }
-
-  raf = requestAnimationFrame(draw);
-  return () => cancelAnimationFrame(raf);
-}
-
-function hexToRgba(hex, alpha) {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r},${g},${b},${alpha})`;
 }
 
 // ===== COURSES CAROUSEL =====
@@ -822,21 +673,10 @@ function observeReveal() {
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(typeLoop, 400);
 
-  // Comet orbits disabled temporarily to fix scrolling lag reported by user
-  // const ctaBtn = document.querySelector('.hero-cta');
-  // if (ctaBtn) createCometOrbit(ctaBtn, '#7baeff', 0.28, 0.20, 5);
-
-  // const videoWrap = document.querySelector('.hero-video-wrap');
-  // if (videoWrap) createCometOrbit(videoWrap, '#7baeff', 0.18, 0.25, 7);
-
-
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     heroVideo.addEventListener('click', () => {
       heroVideo.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xuP4g7IDgDM?si=WGbeJPdBACSYaFRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`;
-      // remove the orbit effect from wrapper when video starts
-      const orbitCanvas = videoWrap.querySelector('canvas');
-      if (orbitCanvas) orbitCanvas.remove();
     });
   }
 
