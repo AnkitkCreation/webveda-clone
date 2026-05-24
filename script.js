@@ -170,6 +170,7 @@ function typeLoop() {
   setTimeout(typeLoop, delay);
 }
 
+
 // ===== COURSES CAROUSEL =====
 let activeTab = 'all';
 let carouselOffset = 0;
@@ -181,46 +182,46 @@ function buildCourseCard(c) {
     : '';
   const featuresHtml = c.features
     ? '<ul class="card-features-list">' +
-        c.features.map(f =>
-          '<li>' +
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
-            f +
-          '</li>'
-        ).join('') +
-       '</ul>'
+    c.features.map(f =>
+      '<li>' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+      f +
+      '</li>'
+    ).join('') +
+    '</ul>'
     : '';
 
   return '<div class="course-card" data-tabs="' + c.tabs.join(',') + '">' +
-      '<div class="card-header">' +
-        '<div class="card-header-icon">' + c.icon + '</div>' +
-        '<div class="card-header-text">' +
-          '<span class="card-header-sup">' + c.headerSup + '</span>' +
-          '<span class="card-header-name">' + lines.join('<br>') + '</span>' +
-        '</div>' +
-      '</div>' +
-      '<div class="card-image-wrap">' +
-        '<img src="' + c.img + '" alt="' + c.title + '" loading="lazy" />' +
-        badge +
-      '</div>' +
-      '<div class="card-body">' +
-        '<div>' +
-          '<div class="card-title">' + c.title + '</div>' +
-          '<div class="card-meta">' +
-            '<span>' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>' +
-              c.lang +
-            '</span>' +
-            '<span>' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>' +
-              c.students +
-            '</span>' +
-          '</div>' +
-        '</div>' +
-        featuresHtml +
-      '</div>' +
-      '<div class="card-cta" style="background:' + c.ctaColor + ';color:' + c.ctaTextColor + '">' +
-        'Get Started &bull; ' + c.price + ' &nbsp;→' +
-      '</div>' +
+    '<div class="card-header">' +
+    '<div class="card-header-icon">' + c.icon + '</div>' +
+    '<div class="card-header-text">' +
+    '<span class="card-header-sup">' + c.headerSup + '</span>' +
+    '<span class="card-header-name">' + lines.join('<br>') + '</span>' +
+    '</div>' +
+    '</div>' +
+    '<div class="card-image-wrap">' +
+    '<img src="' + c.img + '" alt="' + c.title + '" loading="lazy" />' +
+    badge +
+    '</div>' +
+    '<div class="card-body">' +
+    '<div>' +
+    '<div class="card-title">' + c.title + '</div>' +
+    '<div class="card-meta">' +
+    '<span>' +
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>' +
+    c.lang +
+    '</span>' +
+    '<span>' +
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>' +
+    c.students +
+    '</span>' +
+    '</div>' +
+    '</div>' +
+    featuresHtml +
+    '</div>' +
+    '<div class="card-cta" style="background:' + c.ctaColor + ';color:' + c.ctaTextColor + '">' +
+    'Get Started &bull; ' + c.price + ' &nbsp;→' +
+    '</div>' +
     '</div>';
 }
 
@@ -252,7 +253,7 @@ function applyFilter() {
   carouselOffset = 0;
   carousel.style.transition = 'none';
   carousel.style.transform = 'translateX(0)';
-  
+
   // Use timeout to let browser layout pass run before calculating widths
   setTimeout(updateArrows, 60);
 }
@@ -341,9 +342,9 @@ function renderWhoFor() {
   if (!grid) return;
   grid.innerHTML = whoFor.map(w =>
     '<div class="who-card reveal">' +
-      '<span class="who-icon">' + w.icon + '</span>' +
-      '<h3 class="who-title">' + w.title + '</h3>' +
-      '<p class="who-desc">' + w.desc + '</p>' +
+    '<span class="who-icon">' + w.icon + '</span>' +
+    '<h3 class="who-title">' + w.title + '</h3>' +
+    '<p class="who-desc">' + w.desc + '</p>' +
     '</div>'
   ).join('');
 }
@@ -555,22 +556,22 @@ function initCreatorsMarquee() {
     col.forEach(c => {
       cardsHtml +=
         '<div class="creator-card">' +
-          '<p class="creator-text">' + c.text + '</p>' +
-          '<div class="creator-user">' +
-            '<img src="' + c.img + '" alt="' + c.name + '" class="creator-avatar" />' +
-            '<div class="creator-info">' +
-              '<div class="creator-name">' + c.name + '</div>' +
-              '<div class="creator-handle">' + c.handle + '</div>' +
-            '</div>' +
-          '</div>' +
+        '<p class="creator-text">' + c.text + '</p>' +
+        '<div class="creator-user">' +
+        '<img src="' + c.img + '" alt="' + c.name + '" class="creator-avatar" />' +
+        '<div class="creator-info">' +
+        '<div class="creator-name">' + c.name + '</div>' +
+        '<div class="creator-handle">' + c.handle + '</div>' +
+        '</div>' +
+        '</div>' +
         '</div>';
     });
 
     // Duplicate cardsHtml for infinite scroll effect (0 to -50%)
     html +=
       '<div class="marquee-track marquee-track-' + (index + 1) + '">' +
-        cardsHtml +
-        cardsHtml +
+      cardsHtml +
+      cardsHtml +
       '</div>';
   });
 
@@ -583,23 +584,23 @@ function renderFAQ() {
   if (!list) return;
   list.innerHTML = faqs.map((f, i) =>
     '<div class="faq-item reveal ' + (f.permanentOpen ? 'open permanent' : '') + '" id="faq-' + i + '">' +
-      '<button class="faq-question" ' + (f.permanentOpen ? '' : 'onclick="toggleFAQ(' + i + ')"') + ' style="' + (f.permanentOpen ? 'cursor: default;' : '') + '">' +
-        '<div class="faq-q-left">' +
-          '<span class="faq-q-icon">' + f.icon + '</span>' +
-          '<span class="faq-q-text">' + f.q + '</span>' +
-        '</div>' +
-        (f.permanentOpen ? '' :
-        '<span class="faq-icon-toggle">' +
-          '<svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>' +
-          '<svg class="icon-cross" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>' +
-        '</span>') +
-      '</button>' +
-      '<div class="faq-answer" id="faq-answer-' + i + '">' +
-        '<div class="faq-answer-inner">' +
-          '<p>' + f.a + '</p>' +
-          (f.hasBtn ? '<a href="http://wa.me/+916290352731" target="_blank" class="faq-wa-btn">Need Support? WhatsApp Us</a>' : '') +
-        '</div>' +
-      '</div>' +
+    '<button class="faq-question" ' + (f.permanentOpen ? '' : 'onclick="toggleFAQ(' + i + ')"') + ' style="' + (f.permanentOpen ? 'cursor: default;' : '') + '">' +
+    '<div class="faq-q-left">' +
+    '<span class="faq-q-icon">' + f.icon + '</span>' +
+    '<span class="faq-q-text">' + f.q + '</span>' +
+    '</div>' +
+    (f.permanentOpen ? '' :
+      '<span class="faq-icon-toggle">' +
+      '<svg class="icon-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>' +
+      '<svg class="icon-cross" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>' +
+      '</span>') +
+    '</button>' +
+    '<div class="faq-answer" id="faq-answer-' + i + '">' +
+    '<div class="faq-answer-inner">' +
+    '<p>' + f.a + '</p>' +
+    (f.hasBtn ? '<a href="http://wa.me/+916290352731" target="_blank" class="faq-wa-btn">Need Support? WhatsApp Us</a>' : '') +
+    '</div>' +
+    '</div>' +
     '</div>'
   ).join('');
 
