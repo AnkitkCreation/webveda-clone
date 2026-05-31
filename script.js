@@ -1,3 +1,10 @@
+function setSafeHTML(element, htmlString) {
+  if (!element) return;
+  const parser = new DOMParser();
+  const parsed = parser.parseFromString(htmlString, 'text/html');
+  element.replaceChildren(...Array.from(parsed.body.childNodes));
+}
+
 // ===== COURSES DATA =====
 const courses = [
   {
@@ -80,10 +87,10 @@ const bentoSlides = [
     z1_quote: "Dr. Tiwari's approach to newborn care is a lifesaver. We were so overwhelmed, but his guidance made us feel confident as new parents.",
     z1_name: "Sneha & Rahul",
     z1_course: "Enrolled in Newborn Care Basics",
-    z1_svg: `<img src="assets/icon-1.png" alt="Families Mentored" />`,
+    z1_svg: '<img src="assets/REVIEW-7.jpeg" alt="Reviewer" class="z1-bento-review-img" />',
     z2_target: 25480,
     z3_quote: "The best advice for modern parents in a digital world.",
-    z3_author: "Priyanka S."
+    z3_author: "Priyanka Sharma"
   },
   {
     z1_stat: "15+",
@@ -91,21 +98,21 @@ const bentoSlides = [
     z1_quote: "His sessions on emotional well-being for parents changed how we look at our role. It's not just about the baby; it's about us too.",
     z1_name: "Amit Mehra",
     z1_course: "Enrolled in Premium Coaching",
-    z1_svg: `<img src="assets/icon-4.png" alt="Years of Expertise" />`,
+    z1_svg: '<img src="assets/REVIEW-4.jpeg" alt="Reviewer" class="z1-bento-review-img" />',
     z2_target: 26120,
     z3_quote: "Practical, medical-backed, and extremely compassionate.",
-    z3_author: "Anjali K."
+    z3_author: "Anjali Kumari"
   },
   {
     z1_stat: "10K+",
     z1_label: "Online Learners",
     z1_quote: "The diet planning workshops are so practical. My baby is finally eating well without any fuss.",
-    z1_name: "Meera R.",
+    z1_name: "Meera Rai",
     z1_course: "Enrolled in VIP Experience",
-    z1_svg: `<img src="assets/icon-5.png" alt="Online Learners" />`,
+    z1_svg: '<img src="assets/REVIEW-8.jpeg" alt="Reviewer" class="z1-bento-review-img" />',
     z2_target: 27500,
     z3_quote: "Highly recommended for every new parent.",
-    z3_author: "Vikram P."
+    z3_author: "Vikram Pal"
   },
   {
     z1_stat: "98%",
@@ -113,7 +120,7 @@ const bentoSlides = [
     z1_quote: "Emergency prep gave me the peace of mind I needed. I know exactly what to do now.",
     z1_name: "Sonia T.",
     z1_course: "Enrolled in Emergency Prep",
-    z1_svg: `<img src="assets/icon-3.png" alt="Satisfaction Rate" />`,
+    z1_svg: '<img src="assets/REVIEW-2.jpeg" alt="Reviewer" class="z1-bento-review-img" />',
     z2_target: 28200,
     z3_quote: "A must-have for all families.",
     z3_author: "Karan D."
@@ -122,9 +129,9 @@ const bentoSlides = [
     z1_stat: "500+",
     z1_label: "Live Sessions",
     z1_quote: "The interactive sessions are the best part. No question goes unanswered.",
-    z1_name: "Rahul M.",
+    z1_name: "Rahul Mishra",
     z1_course: "Enrolled in Premium Coaching",
-    z1_svg: `<img src="assets/icon-2.png" alt="Live Sessions" />`,
+    z1_svg: '<img src="assets/REVIEW-6.jpeg" alt="Reviewer" class="z1-bento-review-img" />',
     z2_target: 29100,
     z3_quote: "Clear, concise, and professional.",
     z3_author: "Riya B."
@@ -238,7 +245,7 @@ function renderAllCards() {
   const carousel = document.getElementById('coursesCarousel');
   if (!carousel) return;
   // Render ALL cards once — filter just shows/hides
-  carousel.innerHTML = courses.map(buildCourseCard).join('');
+  setSafeHTML(carousel, courses.map(buildCourseCard).join(''));
 }
 
 function applyFilter() {
@@ -349,13 +356,13 @@ function initTabs() {
 function renderWhoFor() {
   const grid = document.getElementById('whoGrid');
   if (!grid) return;
-  grid.innerHTML = whoFor.map(w =>
+  setSafeHTML(grid, whoFor.map(w =>
     '<div class="who-card reveal">' +
     '<span class="who-icon">' + w.icon + '</span>' +
     '<h3 class="who-title">' + w.title + '</h3>' +
     '<p class="who-desc">' + w.desc + '</p>' +
     '</div>'
-  ).join('');
+  ).join(''));
 }
 
 // ===== BENTO GRID LOGIC =====
@@ -420,7 +427,7 @@ function updateBentoSlide(index) {
     document.getElementById('z1-quote').textContent = '"' + slide.z1_quote + '"';
     document.getElementById('z1-name').textContent = slide.z1_name;
     document.getElementById('z1-course').textContent = slide.z1_course;
-    document.getElementById('z1-image-container').innerHTML = slide.z1_svg;
+    setSafeHTML(document.getElementById('z1-image-container'), slide.z1_svg);
 
     // Trigger enter active
     fadeEls.forEach(el => {
@@ -467,9 +474,9 @@ function animateCounter(target) {
     const progress = Math.min(elapsed / duration, 1);
     const easeOutCubic = 1 - Math.pow(1 - progress, 3);
     const current = Math.floor(start + (target - start) * easeOutCubic);
-    el.textContent = current.toLocaleString();
+    el.textContent = current.toLocaleString() + '+';
     if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = target.toLocaleString();
+    else el.textContent = target.toLocaleString() + '+';
   }
   requestAnimationFrame(update);
 }
@@ -495,7 +502,7 @@ function renderAvatars() {
 
     html += '<div class="floating-avatar" style="width:' + size + 'px; height:' + size + 'px; top:' + top + '%; left:' + adjustedLeft + '%; background-color:' + color + '; animation-delay:-' + delay + 's; opacity: 1;" data-index="' + i + '"></div>';
   }
-  container.innerHTML = html;
+  setSafeHTML(container, html);
 }
 
 function shuffleAvatars() {
@@ -537,17 +544,17 @@ function startThoughtAutoplay() {
   }, 5000); // slightly faster than review slide
 }
 
-// ===== CREATORS MARQUEE =====
+// ===== Trusted By Parents=====
 const creatorsData = [
   { text: "Dr. Tiwari's insights on pediatric health are invaluable. His guidance helped us navigate the early months of parenthood with ease and confidence.", name: "Rajesh S.", handle: "@parent_rajesh", img: "assets/REVIEW-1.jpeg" },
   { text: "A truly passionate coach who understands the nuances of modern parenting. Highly recommended for all new parents!", name: "Nisha K.", handle: "@nisha_parenting", img: "assets/REVIEW-2.jpeg" },
   { text: "The VIP package is a game-changer. Having direct access to Dr. Tiwari's expertise made a world of difference for our family.", name: "Vikram T.", handle: "@vikram_family", img: "assets/REVIEW-3.jpeg" },
-  { text: "Practical medical advice combined with modern parenting techniques. This is exactly what we needed.", name: "Sunil P.", handle: "@sunil_p", img: "assets/REVIEW-4.jpeg" },
-  { text: "The emergency first aid training is top-notch. Every parent should go through this.", name: "Kavita M.", handle: "@kavita_m", img: "assets/REVIEW-5.jpeg" },
-  { text: "Clear, concise, and professional. Dr. Tiwari is the best in the field.", name: "Arjun L.", handle: "@arjun_l", img: "assets/REVIEW-6.jpeg" },
+  { text: "Practical medical advice combined with modern parenting techniques. This is exactly what we needed.", name: "Sunil Pal", handle: "@sunil_pal", img: "assets/REVIEW-4.jpeg" },
+  { text: "The emergency first aid training is top-notch. Every parent should go through this.", name: "Kavita Mehta", handle: "@kavita_m", img: "assets/REVIEW-5.jpeg" },
+  { text: "Clear, concise, and professional. Dr. Tiwari is the best in the field.", name: "Arjun Lambha", handle: "@arjun_lambha", img: "assets/REVIEW-6.jpeg" },
   { text: "We feel so much more confident as parents now. Thank you, Dr. Tiwari!", name: "Preeti V.", handle: "@preeti_v", img: "assets/REVIEW-7.jpeg" },
-  { text: "The sleep solutions actually work! Our baby is sleeping through the night.", name: "Manish H.", handle: "@manish_h", img: "assets/REVIEW-8.jpeg" },
-  { text: "A comprehensive ecosystem for family well-being. Worth every penny.", name: "Riya G.", handle: "@riya_g", img: "assets/REVIEW-9.jpeg" }
+  { text: "The sleep solutions actually work! Our baby is sleeping through the night.", name: "Manisha H.", handle: "@manisha_h12", img: "assets/REVIEW-8.jpeg" },
+  { text: "A comprehensive ecosystem for family well-being. Worth every penny.", name: "Riya Garg", handle: "@garg_riya", img: "assets/REVIEW-9.jpeg" }
 ];
 
 function initCreatorsMarquee() {
@@ -584,14 +591,14 @@ function initCreatorsMarquee() {
       '</div>';
   });
 
-  container.innerHTML = html;
+  setSafeHTML(container, html);
 }
 
 // ===== RENDER FAQ =====
 function renderFAQ() {
   const list = document.getElementById('faqList');
   if (!list) return;
-  list.innerHTML = faqs.map((f, i) =>
+  setSafeHTML(list, faqs.map((f, i) =>
     '<div class="faq-item reveal ' + (f.permanentOpen ? 'open permanent' : '') + '" id="faq-' + i + '">' +
     '<button class="faq-question" ' + (f.permanentOpen ? '' : 'onclick="toggleFAQ(' + i + ')"') + ' style="' + (f.permanentOpen ? 'cursor: default;' : '') + '">' +
     '<div class="faq-q-left">' +
@@ -611,7 +618,7 @@ function renderFAQ() {
     '</div>' +
     '</div>' +
     '</div>'
-  ).join('');
+  ).join(''));
 
   // Set initial height for permanent open items
   faqs.forEach((f, i) => {
@@ -686,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     heroVideo.addEventListener('click', () => {
-      heroVideo.innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xuP4g7IDgDM?si=WGbeJPdBACSYaFRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`;
+      setSafeHTML(heroVideo, `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xuP4g7IDgDM?si=WGbeJPdBACSYaFRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`);
     });
   }
 
