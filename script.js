@@ -9,7 +9,8 @@ const courses = [
     title: 'Basic Parenting Preparation',
     lang: '45 Minutes Class', students: 'Expecting Parents',
     price: '₹99', ctaColor: '#4F6BFF', ctaTextColor: '#fff',
-    features: ['Introduction', 'Pregnancy Emotional Prep', 'Financial & Physical Prep', 'Hospital Selection Basics', 'Basics of Newborn Care']
+    features: ['Introduction', 'Pregnancy Emotional Prep', 'Financial & Physical Prep', 'Basics of Hospital Selection', 'Basics of Doctor Selection', 'Basics of Newborn Care'],
+    videoUrl: 'https://www.youtube.com/watch?v=xuP4g7IDgDM'
   },
   {
     tabs: ['all', 'parents'],
@@ -19,8 +20,9 @@ const courses = [
     badge: 'Best Seller',
     title: 'Advanced Newborn Parenting',
     lang: '2 Hour Class', students: 'Deep Newborn Care',
-    price: '₹4999', ctaColor: '#27ae60', ctaTextColor: '#fff',
-    features: ['Advanced Newborn Care', 'Handling Family Interference', 'Milk & Sleep Hygiene', 'Baby Sleep Understanding', 'Formula Milk Guidance']
+    price: '₹1299', ctaColor: '#27ae60', ctaTextColor: '#fff',
+    features: ['Advanced Newborn Care', 'Handling Family Interference', 'Identifying Danger Signs', 'Baby Sleep Understanding', 'Formula Milk Guidance'],
+    videoUrl: 'https://www.youtube.com/watch?v=t77cE_pS09U'
   },
   {
     tabs: ['all', 'parents'],
@@ -31,7 +33,8 @@ const courses = [
     title: 'VIP Parenting Mentorship',
     lang: '4 Personal Sessions', students: 'Direct VIP Access',
     price: '₹9999', ctaColor: '#f39c12', ctaTextColor: '#fff',
-    features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance']
+    features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance'],
+    videoUrl: 'https://www.youtube.com/watch?v=d_Z89PqS604'
   },
   {
     tabs: ['all', 'specialized'],
@@ -42,7 +45,8 @@ const courses = [
     title: 'Child Behavior Management',
     lang: '100 Minutes Course', students: '10-Video Plan',
     price: '₹1999', ctaColor: '#4F6BFF', ctaTextColor: '#fff',
-    features: ['Understanding Behaviors', 'Behavior Correction Methods', 'Positive Parenting Techniques', 'Detailed Video Guidelines']
+    features: ['Understanding Behaviors', 'Behavior Correction Methods', 'Positive Parenting Techniques', 'Detailed Video Guidelines'],
+    videoUrl: 'https://www.youtube.com/watch?v=R-k34qP0sL4'
   },
   {
     tabs: ['all', 'specialized'],
@@ -53,7 +57,8 @@ const courses = [
     title: 'Emergencies At Home',
     lang: '100 Minutes Class', students: 'First Aid Basics',
     price: '₹1999', ctaColor: '#e74c3c', ctaTextColor: '#fff',
-    features: ['Common Home Emergencies', 'First Aid Basics', 'Home Emergency Handling', 'Emergency Workshop Videos']
+    features: ['Common Home Emergencies', 'First Aid Basics', 'Home Emergency Handling', 'Emergency Workshop Videos'],
+    videoUrl: 'https://www.youtube.com/watch?v=O1S8W5LzN_8'
   }
 ];
 
@@ -218,6 +223,10 @@ function buildCourseCard(c) {
     '</div>' +
     '</div>' +
     featuresHtml +
+    '  <a href="' + c.videoUrl + '" target="_blank" class="card-sample-btn">' +
+    '    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block; vertical-align:middle; margin-right:4px;"><polygon points="5 3 19 12 5 21"></polygon></svg>' +
+    '    Free Sample Video' +
+    '  </a>' +
     '</div>' +
     '<div class="card-cta" style="background:' + c.ctaColor + ';color:' + c.ctaTextColor + '">' +
     'Get Started &bull; ' + c.price + ' &nbsp;→' +
