@@ -693,8 +693,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroVideo = document.getElementById('heroVideo');
   if (heroVideo) {
     heroVideo.addEventListener('click', () => {
-      setSafeHTML(heroVideo, `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/xuP4g7IDgDM?si=WGbeJPdBACSYaFRq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: inherit; position: absolute; top: 0; left: 0;"></iframe>`);
-    });
+      setSafeHTML(heroVideo, `<video src="assets/hero%20video.mp4" controls autoplay style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; position: absolute; top: 0; left: 0;"></video>`);
+    }, { once: true });
   }
 
   // Courses — render all cards once, then filter
