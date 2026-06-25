@@ -48,7 +48,7 @@ const courses = [
     lang: '4 Personal Sessions', students: 'Direct VIP Access',
     featuresHeader: 'Everything in Premium and:',
     price: '₹9999', ctaColor: '#f39c12', ctaTextColor: '#fff',
-    features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance'],
+    features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance',{ text: 'Single video at Rs.99 <a href="https://www.youtube.com/watch?v=xuP4g7IDgDM" target="_blank" style="color: #3d5af1; text-decoration: none; font-weight: 600;">Buy Now</a>', isPlayIcon: true }],
     videoUrl: 'https://www.youtube.com/watch?v=d_Z89PqS604'
   },
   {
@@ -254,9 +254,9 @@ function buildCourseCard(c) {
     '    Free Sample Video' +
     '  </a>' +
     '</div>' +
-    '<div class="card-cta" style="background:' + c.ctaColor + ';color:' + c.ctaTextColor + '">' +
+    '<a href="' + c.videoUrl + '" target="_blank" class="card-cta" style="background:' + c.ctaColor + ';color:' + c.ctaTextColor + ';text-decoration:none;">' +
     'Get Started &bull; ' + c.price + ' &nbsp;→' +
-    '</div>' +
+    '</a>' +
     '</div>';
 }
 
