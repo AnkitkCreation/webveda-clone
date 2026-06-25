@@ -27,7 +27,7 @@ const courses = [
     badge: 'Best Seller',
     title: 'Advanced Newborn Parenting',
     lang: '2 Hour Class', students: 'Basic Newborn Care',
-    featuresHeader: 'Everything in Beginners and:',
+    featuresHeader: 'Everything in Beginners +',
     price: '₹1299', ctaColor: '#27ae60', ctaTextColor: '#fff',
     features: [
       'Handling Family Interference',
@@ -46,7 +46,7 @@ const courses = [
     badge: 'Exclusive Mentorship',
     title: 'VIP Parenting Mentorship',
     lang: '4 Personal Sessions', students: 'Direct VIP Access',
-    featuresHeader: 'Everything in Premium and:',
+    featuresHeader: 'Everything in Premium +',
     price: '₹9999', ctaColor: '#f39c12', ctaTextColor: '#fff',
     features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance',{ text: 'Single video at Rs.99 <a href="https://www.youtube.com/watch?v=xuP4g7IDgDM" target="_blank" style="color: #3d5af1; text-decoration: none; font-weight: 600;">Buy Now</a>', isPlayIcon: true }],
     videoUrl: 'https://www.youtube.com/watch?v=d_Z89PqS604'
@@ -236,6 +236,7 @@ function buildCourseCard(c) {
     '<div class="card-body">' +
     '<div>' +
     '<div class="card-title">' + c.title + '</div>' +
+    headerHtml +
     '<div class="card-meta">' +
     '<span>' +
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6 6-6"/></svg>' +
@@ -246,7 +247,6 @@ function buildCourseCard(c) {
     c.students +
     '</span>' +
     '</div>' +
-    headerHtml +
     '</div>' +
     featuresHtml +
     '  <a href="' + c.videoUrl + '" target="_blank" class="card-sample-btn">' +
