@@ -679,8 +679,8 @@ body {
   align-items: center;
   gap: 14px;
   padding: 18px 20px;
-  background: #fcfdfe;
-  border-bottom: 1px solid #f1f5f9;
+  background: #3d5af1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .card-header-icon {
   width: 32px;
@@ -690,7 +690,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #3d5af1;
+  color: #ffffff;
 }
 .card-header-icon svg {
   width: 100%;
@@ -704,14 +704,14 @@ body {
 .card-header-sup {
   font-size: 0.65rem;
   font-weight: 700;
-  color: #64748b;
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .card-header-name {
   font-size: 1rem;
   font-weight: 800;
-  color: #0f172a;
+  color: #ffffff;
   line-height: 1.2;
 }
 
@@ -2036,6 +2036,17 @@ body {
 }
 
 /* Card Features List (inside course cards) */
+.card-features-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  text-align: left;
+}
 .card-features-list {
   list-style: none;
   padding: 0;

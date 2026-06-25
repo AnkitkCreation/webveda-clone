@@ -9,7 +9,7 @@ function setSafeHTML(element, htmlString) {
 const courses = [
   {
     tabs: ['all', 'parents'],
-    headerSup: 'BEGINNER', headerName: 'BASIC\nPREPARATION',
+    headerSup: 'BASIC PREPARATION', headerName: 'BEGINNER',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>`,
     img: 'assets/basic_newborn_care.jpeg',
     badge: 'Beginner Program',
@@ -21,31 +21,39 @@ const courses = [
   },
   {
     tabs: ['all', 'parents'],
-    headerSup: 'PREMIUM', headerName: 'ADVANCED\nNEWBORN',
+    headerSup: 'ADVANCED NEWBORN', headerName: 'PREMIUM',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
     img: 'assets/advanced_newborn_care.jpeg',
     badge: 'Best Seller',
     title: 'Advanced Newborn Parenting',
-    lang: '2 Hour Class', students: 'Deep Newborn Care',
+    lang: '2 Hour Class', students: 'Basic Newborn Care',
+    featuresHeader: 'Everything in Beginners and:',
     price: '₹1299', ctaColor: '#27ae60', ctaTextColor: '#fff',
-    features: ['Advanced Newborn Care', 'Handling Family Interference', 'Identifying Danger Signs', 'Baby Sleep Understanding', 'Formula Milk Guidance'],
+    features: [
+      'Handling Family Interference',
+      'Identifying Danger Signs',
+      'Baby Sleep Understanding',
+      'Formula Milk Guidance',
+      { text: 'Single video at Rs.99 <a href="https://www.youtube.com/watch?v=xuP4g7IDgDM" target="_blank" style="color: #3d5af1; text-decoration: none; font-weight: 600;">Buy Now</a>', isPlayIcon: true }
+    ],
     videoUrl: 'https://www.youtube.com/watch?v=t77cE_pS09U'
   },
   {
     tabs: ['all', 'parents'],
-    headerSup: 'VIP', headerName: '1-ON-1\nMENTORSHIP',
+    headerSup: '1-ON-1 MENTORSHIP', headerName: 'VIP',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>`,
     img: 'assets/consultation_dr_abhishek_tiwari.jpeg',
     badge: 'Exclusive Mentorship',
     title: 'VIP Parenting Mentorship',
     lang: '4 Personal Sessions', students: 'Direct VIP Access',
+    featuresHeader: 'Everything in Premium and:',
     price: '₹9999', ctaColor: '#f39c12', ctaTextColor: '#fff',
     features: ['One-on-One Interaction', 'Baby Diet Planning', 'Emergency Training', 'Parent Wellbeing & Emotions', 'Social & Tech Guidance'],
     videoUrl: 'https://www.youtube.com/watch?v=d_Z89PqS604'
   },
   {
     tabs: ['all', 'specialized'],
-    headerSup: 'SPECIALIZED', headerName: 'BEHAVIOR\nMANAGEMENT',
+    headerSup: 'BEHAVIOR MANAGEMENT', headerName: 'SPECIALIZED',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>`,
     img: 'assets/behavior_management.jpeg',
     badge: 'Parenting Skills',
@@ -57,7 +65,7 @@ const courses = [
   },
   {
     tabs: ['all', 'specialized'],
-    headerSup: 'EMERGENCY', headerName: 'SAFETY\nPREPARATION',
+    headerSup: 'SAFETY PREPARATION', headerName: 'EMERGENCY',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>`,
     img: 'assets/emergency_prep.jpeg',
     badge: 'Emergency Prep',
@@ -192,14 +200,24 @@ function buildCourseCard(c) {
   const badge = c.badge
     ? '<div class="card-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> ' + c.badge + '</div>'
     : '';
+  const headerHtml = c.featuresHeader
+    ? '<div class="card-features-header">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px; color: #3d5af1; flex-shrink: 0;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>' +
+      c.featuresHeader +
+      '</div>'
+    : '';
+
   const featuresHtml = c.features
     ? '<ul class="card-features-list">' +
-    c.features.map(f =>
-      '<li>' +
-      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
-      f +
-      '</li>'
-    ).join('') +
+    c.features.map(f => {
+      const isObj = typeof f === 'object';
+      const text = isObj ? f.text : f;
+      const isPlay = isObj && f.isPlayIcon;
+      const svgIcon = isPlay
+        ? '<svg viewBox="0 0 24 24" fill="currentColor" style="color: #3d5af1; width: 14px; height: 14px; margin-top: 2px; flex-shrink: 0;"><polygon points="6 3 20 12 6 21"></polygon></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+      return '<li>' + svgIcon + text + '</li>';
+    }).join('') +
     '</ul>'
     : '';
 
@@ -228,6 +246,7 @@ function buildCourseCard(c) {
     c.students +
     '</span>' +
     '</div>' +
+    headerHtml +
     '</div>' +
     featuresHtml +
     '  <a href="' + c.videoUrl + '" target="_blank" class="card-sample-btn">' +
